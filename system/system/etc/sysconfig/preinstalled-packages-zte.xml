@@ -1,0 +1,42 @@
+<config>
+    <install-in-user-type package="cn.nubia.gamelauncher">
+        <install-in user-type="SYSTEM" />
+    </install-in-user-type>
+    <install-in-user-type package="cn.nubia.gameassist">
+        <install-in user-type="SYSTEM" />
+    </install-in-user-type>
+    <install-in-user-type package="com.zte.multscr">
+        <install-in user-type="SYSTEM" />
+    </install-in-user-type>
+    <install-in-user-type package="com.zte.distservice.servicemanager">
+        <install-in user-type="SYSTEM" />
+    </install-in-user-type>
+    <install-in-user-type package="com.zte.distservice.relayservice">
+        <install-in user-type="SYSTEM" />
+    </install-in-user-type>
+    <install-in-user-type package="com.zte.mfvkeyguard">
+        <install-in user-type="SYSTEM" />
+    </install-in-user-type>
+    <install-in-user-type package="com.zte.mfvkeyguard.resource">
+        <install-in user-type="SYSTEM" />
+    </install-in-user-type>
+    <install-in-user-type package="com.zte.searchstar">
+        <install-in user-type="SYSTEM" />
+    </install-in-user-type>
+    <install-in-user-type package="com.zte.easymode">
+        <install-in user-type="SYSTEM" />
+    </install-in-user-type>
+    <install-in-user-type package="com.zte.floatassist">
+        <install-in user-type="SYSTEM" />
+    </install-in-user-type>
+    <install-in-user-type package="com.zte.faceverify">
+        <install-in user-type="SYSTEM" />
+    </install-in-user-type>
+    <install-in-user-type package="cuuca.sendfiles.Activity">
+        <install-in user-type="SYSTEM" />
+    </install-in-user-type>
+    <install-in-user-type package="com.zte.usebalance">
+        <install-in user-type="FULL" />
+        <do-not-install-in user-type="android.os.usertype.full.GUEST" />
+    </install-in-user-type>
+</config>

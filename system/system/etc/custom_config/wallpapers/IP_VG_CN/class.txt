@@ -1,0 +1,154 @@
+<Starry Collection>
+<main>
+default_wallpaper_z80uxk1
+
+<Amber Blur>
+<main>
+default_wallpaper_ne2a1
+<secondary>
+default_wallpaper_ne2a2
+default_wallpaper_ne2a3
+default_wallpaper_ne2a4
+
+<Winter s Whim>
+<main>
+com.zte.livewallpaper.LiveWallpaper_ne2e1_Service
+com.zte.livewallpaper.LiveWallpaper_ne2e2_Service
+
+<Enigma Realm>
+<main>
+com.zte.livewallpaper.LiveWallpaper_ne2f1_Service
+<secondary>
+com.zte.livewallpaper.LiveWallpaper_ne2f2_Service
+com.zte.livewallpaper.LiveWallpaper_ne2f3_Service
+
+<Blaze Gleam>
+<main>
+default_wallpaper_ne2b1
+<secondary>
+default_wallpaper_ne2b2
+default_wallpaper_ne2b3
+default_wallpaper_ne2b4
+default_wallpaper_ne2b5
+
+<Bend Space>
+<main>
+default_wallpaper_ne2d1
+<secondary>
+default_wallpaper_ne2d2
+default_wallpaper_ne2d3
+default_wallpaper_ne2d4
+default_wallpaper_ne2d5
+
+<Future>
+<main>
+default_wallpaper_ne2g1
+<secondary>
+com.zte.livewallpaper.LiveWallpaper_ne1c1_Service
+default_wallpaper_ne2g2
+com.zte.livewallpaper.LiveWallpaper_ne1i1_Service
+default_wallpaper_ne1c2
+
+<Poetic Serenity>
+<main>
+default_wallpaper_ne2g5
+<secondary>
+default_wallpaper_ne1b3
+default_wallpaper_ne2g3
+default_wallpaper_ne1b2
+default_wallpaper_ne1b1
+default_wallpaper_ne1b1b
+default_wallpaper_ne1b1c
+default_wallpaper_ne1b1d
+default_wallpaper_ne1b1e
+
+<Crystal Isle>
+<main>
+default_wallpaper_ne2c1
+<secondary>
+default_wallpaper_ne2c2
+default_wallpaper_ne2c3
+default_wallpaper_ne2c4
+default_wallpaper_ne2c5
+
+<Iridescent Reverie>
+<main>
+default_wallpaper_ne1a1
+default_wallpaper_ne1a2
+
+<Frost Breath>
+<main>
+default_wallpaper_ne1h6a
+<secondary>
+default_wallpaper_ne1h6b
+default_wallpaper_ne1h6c
+default_wallpaper_ne1h6d
+default_wallpaper_ne1h6e
+default_wallpaper_ne1h1
+default_wallpaper_ne1h4
+
+<Genesis>
+<main>
+com.zte.livewallpaper.LiveWallpaper_ne1d1_Service
+<secondary>
+com.zte.livewallpaper.LiveWallpaper_ne1d2_Service
+default_wallpaper_m14i1
+default_wallpaper_m14i3
+default_wallpaper_m14i2
+
+<Creatures of the Sea>
+<main>
+default_wallpaper_m14a5
+<secondary>
+default_wallpaper_m14d2
+default_wallpaper_m14d1
+
+<Wing s Plumage>
+<main>
+default_wallpaper_m14c1
+<secondary>
+default_wallpaper_m14c3
+default_wallpaper_m14c6
+
+<Vibrant Cool>
+<original>
+default_wallpaper_ne1e2
+default_wallpaper_ne1e1
+default_wallpaper_ne1e4
+
+<Eye of the Universe>
+<original>
+com.zte.livewallpaper.LiveWallpaper_m14k1_Service
+com.zte.livewallpaper.LiveWallpaper_m14k2_Service
+com.zte.livewallpaper.LiveWallpaper_m13k1_Service
+
+<Eye of the Sky>
+<main>
+default_wallpaper_m14h2
+<secondary>
+default_wallpaper_m13u3
+default_wallpaper_m12u3
+default_wallpaper_m13u2
+default_wallpaper_m13u4
+
+<Eye of the Earth>
+<main>
+default_wallpaper_m12t6
+<secondary>
+default_wallpaper_m13t1
+default_wallpaper_m12t4
+default_wallpaper_m12t1
+default_wallpaper_m12t2
+
+<Gradient and Solid Color>
+<original>
+default_wallpaper_m12n1
+default_wallpaper_m12r1
+default_wallpaper_m12r2
+default_wallpaper_m12r3
+default_wallpaper_m12q3
+default_wallpaper_m12q2
+default_wallpaper_m12q1
+default_wallpaper_m12s3
+default_wallpaper_m12s2
+default_wallpaper_m12s1

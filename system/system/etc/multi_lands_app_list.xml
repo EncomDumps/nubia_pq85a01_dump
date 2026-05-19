@@ -1,0 +1,110 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes' ?>
+<application_config>
+    <package name="com.tencent.mtt" main="" attachedPage="" enable="true" mode="1" double_resume="false" video_auto_fullscreen="true" is_scale="true" need_relaunch="false" draggable="false" />
+    <package name="com.hexin.plat.android"  main="" attachedPage="" enable="true"  mode="1" double_resume="false" video_auto_fullscreen="true"  is_scale="true"  need_relaunch="false" draggable="false" />
+    <package name="com.netease.mobimail" main="" attachedPage="" enable="true" mode="1" double_resume="false" video_auto_fullscreen="true" is_scale="false" need_relaunch="false" draggable="true" />
+    <package name="com.mihoyo.hyperion" main="" attachedPage="" enable="true" mode="1" double_resume="false" video_auto_fullscreen="true" is_scale="false" need_relaunch="false" draggable="false" />
+    <package name="com.baidu.tieba" main="" attachedPage="" enable="true" mode="1" double_resume="false" video_auto_fullscreen="true" is_scale="false" need_relaunch="false" draggable="true" />
+    <package name="com.baidu.tieba_mini" main="" attachedPage="" enable="true" mode="1" double_resume="false" video_auto_fullscreen="true" is_scale="false" need_relaunch="false" draggable="true" />
+    <package name="com.cubic.autohome" main="" attachedPage="" enable="true" mode="1" double_resume="false" video_auto_fullscreen="true" is_scale="false" need_relaunch="false" draggable="true" />
+
+    <package name="com.sohu.newsclient" main="" attachedPage="" enable="true" mode="1" double_resume="false" video_auto_fullscreen="true" is_scale="false" need_relaunch="false" draggable="false" />
+    <package name="com.pupumall.customer" main="" attachedPage="" enable="true" mode="2" double_resume="false" video_auto_fullscreen="true" is_scale="true" need_relaunch="false" draggable="false" />
+
+    <package name="com.eg.android.AlipayGphone" main="" attachedPage="" enable="true" mode="1" double_resume="false" video_auto_fullscreen="true" is_scale="false" need_relaunch="false" draggable="true" />
+    <package name="com.baidu.searchbox" main="com.baidu.searchbox.MainActivity;com.baidu.searchbox.BoxBrowserActivity" attachedPage="" enable="true" mode="1" double_resume="true" video_auto_fullscreen="true" is_scale="false" need_relaunch="false" draggable="true" />
+    <package name="com.baidu.netdisk" main="com.baidu.netdisk.ui.MainActivity" attachedPage="" enable="true" mode="1" double_resume="false" video_auto_fullscreen="true" is_scale="true" need_relaunch="false" draggable="false" />
+    <package name="com.shizhuang.duapp" main="" attachedPage="" enable="true" mode="1" double_resume="false" video_auto_fullscreen="true" is_scale="true" need_relaunch="false" draggable="false" />
+    <package name="com.duowan.kiwi" main="" attachedPage="" enable="true" mode="1" double_resume="false" video_auto_fullscreen="true" is_scale="false" need_relaunch="false" draggable="true" />
+    <package name="com.tencent.gamehelper.smoba" main="" attachedPage="" enable="true" mode="1" double_resume="false" video_auto_fullscreen="true" is_scale="false" need_relaunch="false" draggable="true" />
+    <package name="com.xunlei.downloadprovider" main="" attachedPage="" enable="true" mode="1" double_resume="false" video_auto_fullscreen="true" is_scale="false" need_relaunch="false" draggable="true" />
+    <package name="air.tv.douyu.android" main="" attachedPage="" enable="true" mode="1" double_resume="false" video_auto_fullscreen="true" is_scale="false" need_relaunch="false" draggable="true" />
+    <package name="com.wuba.zhuanzhuan" main="" attachedPage="" enable="true" mode="2" double_resume="false" video_auto_fullscreen="true" is_scale="true" need_relaunch="false" draggable="false" />
+    <package name="com.hpbr.bosszhipin" main="" attachedPage="" enable="true" mode="1" double_resume="false" video_auto_fullscreen="true" is_scale="false" need_relaunch="false" draggable="true" />
+    <package name="com.tencent.gamehelper.pg" main="" attachedPage="" enable="true" mode="1" double_resume="false" video_auto_fullscreen="true" is_scale="false" need_relaunch="false" draggable="false" />
+    <package name="com.xs.fm" main="" attachedPage="" enable="true" mode="1" double_resume="false" video_auto_fullscreen="true" is_scale="false" need_relaunch="false" draggable="false" />
+    <package name="com.wuba" main="" attachedPage="" enable="true" mode="1" double_resume="false" video_auto_fullscreen="true" is_scale="false" need_relaunch="false" draggable="true" />
+    <package name="com.tencent.tgclub" main="com.tencent.tgclub.business.appframe.MainActivity" attachedPage="" enable="true" mode="1" double_resume="false" video_auto_fullscreen="true" is_scale="false" need_relaunch="false" draggable="true" />
+    <package name="com.tencent.qt.qtl" main="" attachedPage="" enable="true" mode="1" double_resume="false" video_auto_fullscreen="true" is_scale="false" need_relaunch="false" draggable="true" />
+    <package name="cn.soulapp.android" main="" attachedPage="" enable="true" mode="1" double_resume="false" video_auto_fullscreen="true" is_scale="false" need_relaunch="false" draggable="true" />
+    <package name="com.tencent.news" main="com.tencent.news.activity.SplashActivity" attachedPage="" enable="true" mode="1" double_resume="false" video_auto_fullscreen="true" is_scale="false" need_relaunch="false" draggable="true" />
+    <package name="com.kwai.videoeditor" main="" attachedPage="" enable="true" mode="1" double_resume="false" video_auto_fullscreen="true" is_scale="false" need_relaunch="false" draggable="true" />
+    <package name="com.netease.mail" main="" attachedPage="" enable="true" mode="1" double_resume="false" video_auto_fullscreen="true" is_scale="false" need_relaunch="false" draggable="true" />
+    <package name="com.yek.android.kfc.activitys" main="" attachedPage="" enable="true" mode="1" double_resume="false" video_auto_fullscreen="true" is_scale="false" need_relaunch="false" draggable="true" />
+    <package name="com.ss.android.article.lite" main="" attachedPage="" enable="true" mode="1" double_resume="false" video_auto_fullscreen="true" is_scale="false" need_relaunch="false" draggable="true" />
+    <package name="com.immomo.momo" main="com.immomo.momo.maintab.MaintabActivity" attachedPage="" enable="true" mode="1" double_resume="false" video_auto_fullscreen="true" is_scale="true" need_relaunch="false" draggable="false" />
+    <package name="com.msxf.ayh" main="" attachedPage="" enable="true" mode="1" double_resume="false" video_auto_fullscreen="true" is_scale="false" need_relaunch="false" draggable="true" />
+    <package name="com.moji.mjweather" main="" attachedPage="" enable="true" mode="1" double_resume="false" video_auto_fullscreen="true" is_scale="false" need_relaunch="false" draggable="true" />
+    <package name="com.baidu.searchbox.lite" main="" attachedPage="" enable="true" mode="1" double_resume="false" video_auto_fullscreen="true" is_scale="false" need_relaunch="false" draggable="true" />
+    <package name="com.netease.cbg" main="" attachedPage="" enable="true" mode="2" double_resume="false" video_auto_fullscreen="true" is_scale="true" need_relaunch="false" draggable="false" />
+    <package name="com.intsig.camscanner" main="" attachedPage="" enable="true" mode="1" double_resume="false" video_auto_fullscreen="true" is_scale="true" need_relaunch="false" draggable="false" />
+    <package name="com.hunantv.imgo.activity" main="" attachedPage="" enable="true" mode="1" double_resume="false" video_auto_fullscreen="true" is_scale="true" need_relaunch="false" draggable="false" />
+    <package name="com.achievo.vipshop" main="" attachedPage="" enable="true" mode="1" double_resume="false" video_auto_fullscreen="true" is_scale="true" need_relaunch="false" draggable="false" />
+    <package name="com.tencent.weishi" main="" attachedPage="" enable="true" mode="1" double_resume="false" video_auto_fullscreen="true" is_scale="false" need_relaunch="false" draggable="false" />
+    <package name="com.duowan.mobile" main="" attachedPage="" enable="true" mode="1" double_resume="true" video_auto_fullscreen="true" is_scale="true" need_relaunch="false" draggable="false" />
+    <package name="com.bankcomm.Bankcomm" main="" attachedPage="" enable="true" mode="1" double_resume="false" video_auto_fullscreen="true" is_scale="false" need_relaunch="false" draggable="true" />
+    <package name="com.bilibili.comic" main="" attachedPage="" enable="true" mode="1" double_resume="false" video_auto_fullscreen="true" is_scale="false" need_relaunch="false" draggable="true" />
+    <package name="com.netease.buff" main="" attachedPage="" enable="true" mode="1" double_resume="false" video_auto_fullscreen="true" is_scale="false" need_relaunch="false" draggable="true" />
+    <package name="com.anjuke.android.app" main="" attachedPage="" enable="true" mode="1" double_resume="false" video_auto_fullscreen="true" is_scale="false" need_relaunch="false" draggable="true" />
+    <package name="com.yipiao" main="" attachedPage="" enable="true" mode="1" double_resume="false" video_auto_fullscreen="true" is_scale="false" need_relaunch="false" draggable="true" />
+    <package name="com.daofeng.zuhaowan" main="" attachedPage="" enable="true" mode="1" double_resume="false" video_auto_fullscreen="true" is_scale="false" need_relaunch="false" draggable="true" />
+    <package name="com.hupu.shihuo" main="" attachedPage="" enable="true" mode="2" double_resume="false" video_auto_fullscreen="true" is_scale="true" need_relaunch="false" draggable="false" />
+    <package name="com.qq.ac.android" main="" attachedPage="" enable="true" mode="1" double_resume="false" video_auto_fullscreen="true" is_scale="false" need_relaunch="false" draggable="true" />
+    <package name="com.hupu.games" main="" attachedPage="" enable="true" mode="1" double_resume="false" video_auto_fullscreen="true" is_scale="false" need_relaunch="false" draggable="true" />
+    <package name="cn.xiaochuankeji.tieba" main="" attachedPage="" enable="true" mode="1" double_resume="false" video_auto_fullscreen="true" is_scale="false" need_relaunch="false" draggable="true" />
+    <package name="cn.damai" main="" attachedPage="" enable="true" mode="2" double_resume="false" video_auto_fullscreen="true" is_scale="true" need_relaunch="false" draggable="false" />
+    <package name="com.sankuai.meituan.dispatch.crowdsource" main="" attachedPage="" enable="true" mode="1" double_resume="false" video_auto_fullscreen="true" is_scale="false" need_relaunch="false" draggable="true" />
+    <package name="com.coolapk.market" main="" attachedPage="" enable="true" mode="1" double_resume="false" video_auto_fullscreen="true" is_scale="true" need_relaunch="false" draggable="false" />
+    <package name="com.wwwscn.yuexingbao" main="" attachedPage="" enable="true" mode="1" double_resume="false" video_auto_fullscreen="true" is_scale="false" need_relaunch="false" draggable="false" />
+    <package name="com.baidu.wenku" main="" attachedPage="" enable="true" mode="1" double_resume="false" video_auto_fullscreen="true" is_scale="false" need_relaunch="false" draggable="true" />
+    <package name="com.qihoo.loan" main="" attachedPage="" enable="true" mode="1" double_resume="false" video_auto_fullscreen="true" is_scale="false" need_relaunch="false" draggable="true" />
+    <package name="com.citiccard.mobilebank" main="" attachedPage="" enable="true" mode="1" double_resume="false" video_auto_fullscreen="true" is_scale="false" need_relaunch="false" draggable="true" />
+    <package name="com.clover.daysmatter" main="" attachedPage="" enable="true" mode="1" double_resume="false" video_auto_fullscreen="true" is_scale="false" need_relaunch="false" draggable="true" />
+    <package name="com.p1.mobile.putong" main="" attachedPage="" enable="true" mode="1" double_resume="false" video_auto_fullscreen="true" is_scale="false" need_relaunch="false" draggable="true" />
+    <package name="com.lalamove.huolala.client" main="" attachedPage="" enable="true" mode="1" double_resume="false" video_auto_fullscreen="true" is_scale="false" need_relaunch="false" draggable="true" />
+    <package name="com.videogo" main="" attachedPage="" enable="true" mode="1" double_resume="false" video_auto_fullscreen="true" is_scale="true" need_relaunch="false" draggable="false" />
+    <package name="com.shoujiduoduo.ringtone" main="" attachedPage="" enable="true" mode="1" double_resume="false" video_auto_fullscreen="true" is_scale="false" need_relaunch="false" draggable="true" />
+    <package name="com.kugou.android.ringtone" main="" attachedPage="" enable="true" mode="1" double_resume="false" video_auto_fullscreen="true" is_scale="false" need_relaunch="false" draggable="true" />
+    <package name="cn.TuHu.android" main="" attachedPage="" enable="true" mode="1" double_resume="false" video_auto_fullscreen="true" is_scale="false" need_relaunch="false" draggable="true" />
+    <package name="com.qeeyou.app.accelerator" main="" attachedPage="" enable="true" mode="1" double_resume="false" video_auto_fullscreen="true" is_scale="false" need_relaunch="false" draggable="true" />
+    <package name="com.qq.qcloud" main="" attachedPage="" enable="true" mode="1" double_resume="false" video_auto_fullscreen="true" is_scale="false" need_relaunch="false" draggable="true" />
+    <package name="com.yiche.autoeasy" main="" attachedPage="" enable="true" mode="1" double_resume="false" video_auto_fullscreen="true" is_scale="false" need_relaunch="false" draggable="true" />
+    <package name="com.lucky.luckyclient" main="" attachedPage="" enable="true" mode="2" double_resume="false" video_auto_fullscreen="true" is_scale="true" need_relaunch="false" draggable="false" />
+    <package name="com.kuangxiangciweimao.novel" main="" attachedPage="" enable="true" mode="1" double_resume="false" video_auto_fullscreen="true" is_scale="false" need_relaunch="false" draggable="true" />
+    <package name="cn.com.spdb.mobilebank.per" main="" attachedPage="" enable="true" mode="1" double_resume="false" video_auto_fullscreen="true" is_scale="false" need_relaunch="false" draggable="true" />
+    <package name="com.cctv.yangshipin.app.androidp" main="" attachedPage="" enable="true" mode="1" double_resume="false" video_auto_fullscreen="true" is_scale="false" need_relaunch="false" draggable="true" />
+    <package name="cn.hsa.app" main="" attachedPage="" enable="true" mode="1" double_resume="false" video_auto_fullscreen="true" is_scale="false" need_relaunch="false" draggable="false" />
+    <package name="com.ZArchiver.chengyuda" main="com.file.fileManage.ui.MainActivity" attachedPage="" enable="true" mode="1" double_resume="false" video_auto_fullscreen="true" is_scale="false" need_relaunch="false" draggable="true" />
+    <package name="com.job.android" main="" attachedPage="" enable="true" mode="1" double_resume="false" video_auto_fullscreen="true" is_scale="false" need_relaunch="false" draggable="true" />
+    <package name="com.tplink.ipc" main="" attachedPage="" enable="true" mode="1" double_resume="false" video_auto_fullscreen="true" is_scale="false" need_relaunch="false" draggable="true" />
+    <package name="com.taobao.litetao" main="" attachedPage="" enable="true" mode="1" double_resume="false" video_auto_fullscreen="true" is_scale="false" need_relaunch="false" draggable="false" />
+    <package name="com.tencent.qqpimsecure" main="com.tencent.server.fore.QuickLoadActivity" attachedPage="" enable="true" mode="1" double_resume="false" video_auto_fullscreen="true" is_scale="false" need_relaunch="false" draggable="true" />
+    <package name="com.ganji.android.haoche_c" main="" attachedPage="" enable="true" mode="1" double_resume="false" video_auto_fullscreen="true" is_scale="false" need_relaunch="false" draggable="true" />
+    <package name="cn.xiaochuankeji.zuiyouLite" main="" attachedPage="" enable="true" mode="1" double_resume="false" video_auto_fullscreen="true" is_scale="false" need_relaunch="false" draggable="true" />
+    <package name="com.umetrip.android.msky.app" main="" attachedPage="" enable="true" mode="1" double_resume="false" video_auto_fullscreen="true" is_scale="false" need_relaunch="false" draggable="true" />
+    <package name="com.hanweb.android.zhejiang.activity" main="" attachedPage="" enable="true" mode="1" double_resume="false" video_auto_fullscreen="true" is_scale="false" need_relaunch="false" draggable="true" />
+    <package name="cn.ninebot.ninebot" main="" attachedPage="" enable="true" mode="1" double_resume="false" video_auto_fullscreen="true" is_scale="false" need_relaunch="false" draggable="true" />
+    <package name="com.ygkj.chelaile.standard" main="" attachedPage="" enable="true" mode="1" double_resume="false" video_auto_fullscreen="true" is_scale="false" need_relaunch="false" draggable="true" />
+    <package name="com.cs_credit_bank" main="" attachedPage="" enable="true" mode="1" double_resume="false" video_auto_fullscreen="true" is_scale="false" need_relaunch="false" draggable="true" />
+    <package name="com.lingan.seeyou" main="" attachedPage="" enable="true" mode="1" double_resume="false" video_auto_fullscreen="true" is_scale="false" need_relaunch="false" draggable="true" />
+    <package name="com.pingan.lifeinsurance" main="" attachedPage="" enable="true" mode="1" double_resume="false" video_auto_fullscreen="true" is_scale="false" need_relaunch="false" draggable="true" />
+    <package name="com.xiaomi.shop" main="" attachedPage="" enable="true" mode="2" double_resume="false" video_auto_fullscreen="true" is_scale="true" need_relaunch="false" draggable="false" />
+    <package name="com.shinyv.cnr" main="" attachedPage="" enable="true" mode="1" double_resume="false" video_auto_fullscreen="true" is_scale="false" need_relaunch="false" draggable="true" />
+    <package name="com.excelliance.dualaid" main="" attachedPage="" enable="true" mode="1" double_resume="false" video_auto_fullscreen="true" is_scale="false" need_relaunch="false" draggable="true" />
+    <package name="cn.wsds.gamemaster" main="" attachedPage="" enable="true" mode="1" double_resume="false" video_auto_fullscreen="true" is_scale="false" need_relaunch="false" draggable="true" />
+
+    <package name="com.shoujiduoduo.wallpaper" main="" attachedPage="" enable="true" mode="1" double_resume="false" video_auto_fullscreen="true" is_scale="true" need_relaunch="false" draggable="false" />
+    <package name="com.iflytek.inputmethod" main="com.iflytek.inputmethod.settingsnew.main.MainActivity" attachedPage="" enable="true" mode="1" double_resume="false" video_auto_fullscreen="true" is_scale="true" need_relaunch="false" draggable="false" />
+    <package name="cn.nubia.bbs" main="com.zealer.login.MainActivity" attachedPage="" enable="true" mode="1" double_resume="false" video_auto_fullscreen="true" is_scale="true" need_relaunch="false" draggable="false" />
+    <package name="cn.zte.bbs" main="com.zealer.login.MainActivity" attachedPage="" enable="true" mode="1" double_resume="false" video_auto_fullscreen="true" is_scale="true" need_relaunch="false" draggable="false" />
+    <package name="cn.nubia.externdevice" main="cn.nubia.externdevice.start.Home3Activity" attachedPage="" enable="true" mode="1" double_resume="false" video_auto_fullscreen="true" is_scale="false" need_relaunch="true" draggable="false" />
+    <package name="com.chaozh.iReaderNubia" main="com.zhangyue.iReader.bookshelf.ui.ActivityBookShelf" attachedPage="" enable="true" mode="1" double_resume="false" video_auto_fullscreen="true" is_scale="false" need_relaunch="false" draggable="true" />
+    <package name="com.smzdm.client.android" main="" enable="true" mode="2" double_resume="false" video_auto_fullscreen="true" is_scale="true" need_relaunch="false" draggable="false" />
+    <package name="com.zte.softda" main="com.zte.softda.ui.HomeActivity;cn.com.zte.rn.RNServiceActivity" enable="true" mode="1" double_resume="false" video_auto_fullscreen="true" is_scale="false" need_relaunch="false" draggable="false" />
+    <package name="cn.com.zte.mobilemail" main="cn.com.zte.zmail.app.ui.activity.HomeActivity" enable="true" mode="1" double_resume="false" video_auto_fullscreen="true" is_scale="false" need_relaunch="false" draggable="false" />
+    <package name="com.tencent.qqmusic" main="" enable="true" mode="1" double_resume="false" video_auto_fullscreen="true" is_scale="false" need_relaunch="false" draggable="false" />
+    <package name="com.eastmoney.android.berlin" main="com.eastmoney.android.module.launcher.internal.home.HomeActivity" enable="true" mode="1" double_resume="false" video_auto_fullscreen="true" is_scale="false" need_relaunch="false" draggable="false" />
+    <package name="cn.huohua.eduparent" main="" enable="true" mode="1" double_resume="false" video_auto_fullscreen="true" is_scale="false" need_relaunch="false" draggable="false" />
+    <package name="com.eno.xyzq.page" main="" enable="true" mode="1" double_resume="false" video_auto_fullscreen="true" is_scale="false" need_relaunch="false" draggable="false" />
+    <package name="cn.wps.note" main="" enable="true" mode="1" double_resume="false" video_auto_fullscreen="true" is_scale="false" need_relaunch="false" draggable="false" />
+</application_config>

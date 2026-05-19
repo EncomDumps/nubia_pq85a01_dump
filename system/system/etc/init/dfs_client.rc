@@ -1,0 +1,27 @@
+on property:sys.dfsserviced.client=0
+    stop ZTEDFSServiced
+
+on property:sys.dfsserviced.client=1
+    start ZTEDFSServiced
+
+on property:sys.dfsserviced.category=0
+    stop localfuse
+
+on property:sys.dfsserviced.category=1
+    start localfuse
+
+service ZTEDFSServiced /system/bin/ZTEDFSServiced
+    class late_start
+    oneshot
+    disabled
+    user root
+    group root system media_rw
+    seclabel u:r:ZTEDFSServiced:s0
+
+service localfuse /system/bin/localfuse /mnt/dfs -o allow_other -f
+    class late_start
+    oneshot
+    disabled
+    user root
+    group root system media_rw
+    seclabel u:r:localfuse:s0

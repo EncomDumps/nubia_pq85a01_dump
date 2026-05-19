@@ -1,0 +1,57 @@
+{
+  "easyGoVersion": "1.0",
+  "client": "com.sina.weibo",
+  "logicEntities": [
+    {
+      "head": {
+        "function": "magicwindow",
+        "required": "true"
+      },
+      "body": {
+        "mode": "1",
+        "activityPairs": [
+          {
+            "from": "com.sina.weibo.MainTabActivity",
+            "to": "*"
+          },
+          {
+            "from": "com.sina.weibo.VisitorMainTabActivity",
+            "to": "*"
+          },
+          {
+            "from": "com.sina.weibo.page.SearchResultActivity",
+            "to": "*"
+          },
+          {
+            "from": "com.sina.weibo.page.SuperPageActivity",
+            "to": "*"
+          }
+        ],
+        "Activities": [
+          {
+            "name": "com.sina.weibo.story.publisher.activity.StorySendActivity",
+            "defaultFullScreen": "true"
+          },
+          {
+            "name": "com.sina.weibo.feed.detail.composer.ComposerActivity",
+            "defaultFullScreen": "true"
+          },
+          {
+            "name": "com.sina.weibo.video.tabcontainer.VideoTabContainerActivity",
+            "defaultFullScreen": "true"
+          },
+          {
+            "name": "com.sina.weibo.photoalbum.imageviewer.ImageViewer",
+            "defaultFullScreen": "true"
+          }
+        ],
+        "transActivities": ["com.sina.weibo.composerinde.ComposerDispatchActivity","com.sina.weibo.OpenProductAppActivity"],
+        "UX": {
+          "supportRotationUxCompat": "false",
+          "isDraggable": "true",
+          "draggingToFreeForm":"app"
+        }
+      }
+    }
+  ]
+}

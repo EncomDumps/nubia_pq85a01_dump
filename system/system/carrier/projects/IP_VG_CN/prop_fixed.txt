@@ -1,0 +1,4 @@
+persist.vendor.custom.variant.id=IP_VG_CN 
+ro.oem.key1=IP_VG_CN 
+ro.vendor.feature.ext_ver_suffix=_VG
+

@@ -1,0 +1,8 @@
+persist.vendor.custom.variant.id=IP_LTY_CN 
+ro.oem.key1=IP_LTY_CN 
+ro.vendor.feature.ext_ver_suffix=_LTY 
+ro.vendor.feature.zte_feature_launcher_resource=gen_nubia_cn_zte_pq85a01_zte_ip_lty_cn 
+ro.vendor.build.def_theme_name=default_theme_59 
+ro.vendor.feature.def_color_name=ZTE_TIANYI_BLUE 
+ro.vendor.feature.zte_feature_theme_resource=pq85a01_w_lty
+

@@ -1,0 +1,5 @@
+persist.vendor.custom.variant.id=GEN_CN 
+ro.oem.key1=GEN_CN 
+persist.vendor.deftreg.version=2023V1 
+persist.vendor.deftreg.5G=true
+

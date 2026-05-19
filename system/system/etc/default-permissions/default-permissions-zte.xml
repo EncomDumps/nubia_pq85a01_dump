@@ -1,0 +1,235 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+
+<exceptions>
+    <exception
+            package="com.zte.heartyservice"
+            sha256-cert-digest="23:99:00:A8:A1:1B:39:FF:D3:40:06:00:D8:16:07:ED:9E:4B:B6:AD:25:29:9B:30:55:3E:1F:E6:C3:82:84:25">
+        <!-- STORAGE -->
+        <permission name="android.permission.READ_EXTERNAL_STORAGE" fixed="false"/>
+        <permission name="android.permission.WRITE_EXTERNAL_STORAGE" fixed="false"/>
+        <permission name="android.permission.READ_MEDIA_AUDIO" fixed="false"/>
+        <permission name="android.permission.READ_MEDIA_IMAGES" fixed="false"/>
+        <permission name="android.permission.READ_MEDIA_VIDEO" fixed="false"/>
+        <!-- Contacts -->
+        <permission name="android.permission.GET_ACCOUNTS" fixed="false"/>
+        <permission name="android.permission.READ_CONTACTS" fixed="false"/>
+        <permission name="android.permission.WRITE_CONTACTS" fixed="false"/>
+        <!-- MICROPHONE-->
+        <permission name="android.permission.RECORD_AUDIO" fixed="false"/>
+        <!-- PHONE -->
+        <permission name="android.permission.CALL_PHONE" fixed="false"/>
+        <permission name="android.permission.PROCESS_OUTGOING_CALLS" fixed="false"/>
+        <permission name="android.permission.READ_CALL_LOG" fixed="false"/>
+        <permission name="android.permission.READ_PHONE_STATE" fixed="false"/>
+        <permission name="android.permission.WRITE_CALL_LOG" fixed="false"/>
+        <!-- SMS -->
+        <permission name="android.permission.READ_SMS" fixed="false"/>
+        <permission name="android.permission.RECEIVE_SMS" fixed="false"/>
+        <permission name="android.permission.RECEIVE_MMS" fixed="false"/>
+        <permission name="android.permission.RECEIVE_WAP_PUSH" fixed="false"/>
+        <permission name="android.permission.SEND_SMS" fixed="false"/>
+        <permission name="android.permission.ZTE_WRITE_MSG" fixed="false"/>
+        <!-- LOCATION -->
+        <permission name="android.permission.ACCESS_COARSE_LOCATION" fixed="false"/>
+        <permission name="android.permission.ACCESS_FINE_LOCATION" fixed="false"/>
+        <!-- NEARBY -->
+        <permission name="android.permission.BLUETOOTH_CONNECT" fixed="false"/>
+    </exception>
+
+    <exception
+            package="cn.zte.music"
+            sha256-cert-digest="A8:A0:F8:06:FC:6D:8C:06:89:59:DB:9F:C8:38:ED:16:73:EA:0B:19:E7:A2:AB:55:D7:60:74:BB:C7:10:3E:8D">
+        <!-- STORAGE -->
+        <permission name="android.permission.READ_EXTERNAL_STORAGE" fixed="false"/>
+        <permission name="android.permission.WRITE_EXTERNAL_STORAGE" fixed="false"/>
+    </exception>
+
+    <exception
+            package="zte.com.cn.filer"
+            sha256-cert-digest="81:27:80:C5:BF:94:F7:4E:B3:F0:47:E5:4A:8A:8D:25:B8:3D:FA:4A:B8:5A:5A:85:2F:CB:39:1D:91:2D:B2:B2">
+        <!-- STORAGE -->
+        <permission name="android.permission.READ_EXTERNAL_STORAGE" fixed="false"/>
+        <permission name="android.permission.WRITE_EXTERNAL_STORAGE" fixed="false"/>
+    </exception>
+
+    <exception
+            package="com.zte.mifavor.launcher"
+            sha256-cert-digest="D7:BB:72:EA:42:AD:FC:AD:F5:2C:3D:64:1B:2B:40:18:1D:6A:36:93:2A:81:C9:32:07:DB:17:28:11:CA:46:B7">
+        <!-- STORAGE -->
+        <permission name="android.permission.READ_EXTERNAL_STORAGE" fixed="false"/>
+        <permission name="android.permission.WRITE_EXTERNAL_STORAGE" fixed="false"/>
+    </exception>
+
+    <exception
+            package="com.android.dialer"
+            sha256-cert-digest="AD:2C:B2:D8:01:CD:CF:E2:5D:CF:DE:C0:BF:49:6A:49:3E:41:59:10:1E:3E:1C:57:3E:B4:DF:B9:F1:95:58:72">
+    </exception>
+
+    <exception
+            package="com.zte.zdm"
+            sha256-cert-digest="D9:73:1D:BE:FD:C0:0B:28:8C:BF:7A:36:12:6B:0A:C1:A8:AD:E0:4B:39:E2:85:45:EB:96:71:40:74:44:3E:19">
+        <!-- STORAGE -->
+        <permission name="android.permission.READ_EXTERNAL_STORAGE" fixed="false"/>
+        <permission name="android.permission.WRITE_EXTERNAL_STORAGE" fixed="false"/>
+        <!-- PHONE -->
+        <permission name="android.permission.READ_PHONE_STATE" fixed="false"/>
+        <permission name="android.permission.POST_NOTIFICATIONS" fixed="false"/>
+    </exception>
+
+    <exception
+            package="com.android.contacts"
+            sha256-cert-digest="AD:2C:B2:D8:01:CD:CF:E2:5D:CF:DE:C0:BF:49:6A:49:3E:41:59:10:1E:3E:1C:57:3E:B4:DF:B9:F1:95:58:72">
+        <!-- CALENDAR -->
+        <permission name="android.permission.READ_CALENDAR" fixed="false"/>
+        <permission name="android.permission.WRITE_CALENDAR" fixed="false"/>
+    </exception>
+
+    <exception
+            package="com.zte.mfvkeyguard"
+            sha256-cert-digest="A8:A0:F8:06:FC:6D:8C:06:89:59:DB:9F:C8:38:ED:16:73:EA:0B:19:E7:A2:AB:55:D7:60:74:BB:C7:10:3E:8D">
+        <!-- STORAGE -->
+        <permission name="android.permission.READ_EXTERNAL_STORAGE" fixed="false"/>
+        <permission name="android.permission.WRITE_EXTERNAL_STORAGE" fixed="false"/>
+    </exception>
+
+    <exception
+            package="com.icoolme.android.zteweather"
+            sha256-cert-digest="4F:6C:0B:EB:EC:3E:A8:5E:BD:62:CD:EC:F4:75:CB:4F:07:90:FA:46:7F:EA:58:80:97:B0:B1:7D:46:30:C6:5A">
+        <!-- PHONE -->
+        <permission name="android.permission.READ_PHONE_STATE" fixed="false"/>
+        <!-- STORAGE -->
+        <permission name="android.permission.READ_EXTERNAL_STORAGE" fixed="false"/>
+        <permission name="android.permission.WRITE_EXTERNAL_STORAGE" fixed="false"/>
+        <!-- LOCATION -->
+        <permission name="android.permission.ACCESS_COARSE_LOCATION" fixed="false"/>
+        <permission name="android.permission.ACCESS_FINE_LOCATION" fixed="false"/>
+        <permission name="android.permission.ACCESS_BACKGROUND_LOCATION" fixed="false"/>
+    </exception>
+    <exception
+            package="com.zte.mifavor.weather"
+            sha256-cert-digest="1B:C9:55:ED:1B:64:D3:9F:21:3A:AA:F1:03:4D:D2:E0:21:A4:7B:FD:2B:B9:D4:CC:FF:2A:45:5B:4F:E3:7B:AA">
+        <!-- PHONE -->
+        <permission name="android.permission.READ_PHONE_STATE" fixed="false"/>
+        <!-- LOCATION -->
+        <permission name="android.permission.ACCESS_COARSE_LOCATION" fixed="false"/>
+        <permission name="android.permission.ACCESS_FINE_LOCATION" fixed="false"/>
+        <permission name="android.permission.ACCESS_BACKGROUND_LOCATION" fixed="false"/>
+    </exception>
+    <exception
+            package="com.amap.ams"
+            sha256-cert-digest="3B:37:65:08:4D:EF:BF:87:34:AB:39:FB:9A:36:01:4F:87:04:B9:C7:26:90:FF:CE:43:A7:C9:79:58:62:7C:F8">
+        <permission name="android.permission.ACCESS_FINE_LOCATION" fixed="false"/>
+    </exception>
+    <exception
+            package="com.zte.aliveupdate"
+            sha256-cert-digest="D9:73:1D:BE:FD:C0:0B:28:8C:BF:7A:36:12:6B:0A:C1:A8:AD:E0:4B:39:E2:85:45:EB:96:71:40:74:44:3E:19">
+        <permission name="android.permission.POST_NOTIFICATIONS" fixed="false"/>
+    </exception>
+    <exception
+            package="com.zte.handservice"
+            sha256-cert-digest="AB:51:42:C0:FA:0F:19:F2:E3:6C:9B:0C:3F:69:27:8A:B0:78:13:0A:9D:32:45:8E:E5:F3:C6:D1:1D:B3:23:FA">
+        <permission name="android.permission.POST_NOTIFICATIONS" fixed="false"/>
+    </exception>
+
+    <exception
+            package="com.zte.car.launcher"
+            sha256-cert-digest="DB:4E:3A:B7:C2:F3:C7:7E:23:6E:B1:CE:D7:F8:08:15:8C:74:26:01:3F:66:22:09:4B:EE:0E:82:0C:A0:51:CE">
+        <permission name="android.permission.READ_CONTACTS" fixed="false"/>
+        <permission name="android.permission.CALL_PHONE" fixed="false"/>
+        <permission name="android.permission.BLUETOOTH_CONNECT" fixed="false"/>
+    </exception>
+    <exception
+            package="com.baidu.carlife.zte"
+            sha256-cert-digest="50:9E:03:E3:76:B6:76:B2:5A:DC:41:C3:DB:DA:6D:FA:5D:0F:F1:2D:BA:1C:8C:0C:A3:2A:D1:10:EE:A7:86:67">
+        <permission name="android.permission.ACCESS_FINE_LOCATION" fixed="false"/>
+        <permission name="android.permission.BLUETOOTH_CONNECT" fixed="false"/>
+        <permission name="android.permission.BLUETOOTH_SCAN" fixed="false"/>
+    </exception>
+    <exception
+            package="com.zte.carmateservice"
+            sha256-cert-digest="C8:A2:E9:BC:CF:59:7C:2F:B6:DC:66:BE:E2:93:FC:13:F2:FC:47:EC:77:BC:6B:2B:0D:52:C1:1F:51:19:2A:B8">
+        <permission name="android.permission.BLUETOOTH_CONNECT" fixed="false"/>
+        <permission name="android.permission.RECORD_AUDIO" fixed="false"/>
+    </exception>
+    <exception
+            package="com.zte.knowledge"
+            sha256-cert-digest="11:84:C7:12:47:3E:7B:90:4C:B6:5E:A0:B9:98:1D:8F:DD:6F:4C:E8:01:3F:B6:FC:DF:C8:10:0C:97:34:89:2F">
+        <!-- Contacts -->
+        <permission name="android.permission.READ_CONTACTS" fixed="false"/>
+        <permission name="android.permission.WRITE_CONTACTS" fixed="false"/>
+        <permission name="android.permission.READ_CALENDAR" fixed="false"/>
+        <permission name="android.permission.WRITE_CALENDAR" fixed="false"/>
+    </exception>
+    <exception
+            package="com.zte.aigc"
+            sha256-cert-digest="63:A1:AB:60:AD:EC:DF:60:62:EC:7F:4A:83:7E:60:95:CB:8B:C9:D4:4E:3E:86:06:5D:7E:67:10:2D:11:CA:3C">
+        <permission name="android.permission.POST_NOTIFICATIONS" fixed="false"/>
+    </exception>
+    <exception
+            package="com.zte.notice.strategy"
+            sha256-cert-digest="DB:4E:3A:B7:C2:F3:C7:7E:23:6E:B1:CE:D7:F8:08:15:8C:74:26:01:3F:66:22:09:4B:EE:0E:82:0C:A0:51:CE">
+        <permission name="android.permission.READ_CONTACTS" fixed="false"/>
+        <permission name="android.permission.WRITE_CONTACTS" fixed="false"/>
+    </exception>
+    <exception
+            package="com.zte.ZteLbs"
+            sha256-cert-digest="1A:D8:F7:EA:73:2B:50:6F:98:DA:A7:1F:7C:AB:1C:58:16:D1:1E:F5:CA:88:0C:F3:1B:5B:FB:FF:8B:C6:EC:58">
+        <!-- LOCATION -->
+        <permission name="android.permission.ACCESS_COARSE_LOCATION" fixed="true"/>
+        <permission name="android.permission.ACCESS_FINE_LOCATION" fixed="true"/>
+        <permission name="android.permission.ACCESS_BACKGROUND_LOCATION" fixed="true"/>
+    </exception>
+
+    <exception
+            package="com.baidu.BaiduMap"
+            sha256-cert-digest="A6:EF:81:7B:FD:6C:08:34:42:A1:49:85:6E:51:03:6F:69:12:C2:DB:6B:60:09:DB:81:27:CD:D6:41:E2:95:A9">
+        <permission name="android.permission.POST_NOTIFICATIONS" fixed="false"/>
+    </exception>
+
+    <exception
+            package="tv.danmaku.bili"
+            sha256-cert-digest="93:BA:27:0F:55:21:13:9E:CA:FE:4B:B6:38:AC:5B:11:98:BC:54:8F:62:D9:FD:8F:85:80:A0:79:FA:F5:91:0E">
+        <permission name="android.permission.POST_NOTIFICATIONS" fixed="false"/>
+    </exception>
+
+    <exception
+            package="com.duowan.kiwi"
+            sha256-cert-digest="D6:C3:EF:17:B9:95:F5:67:CC:55:38:1A:D3:1E:5B:56:D9:B7:61:FB:ED:75:C9:57:E0:E0:49:33:76:78:B1:EB">
+        <permission name="android.permission.POST_NOTIFICATIONS" fixed="false"/>
+    </exception>
+
+    <exception
+            package="ctrip.android.view"
+            sha256-cert-digest="13:15:D0:3F:03:03:63:E8:DA:47:5D:E2:34:E5:8B:44:4C:BF:1E:F2:1C:AE:DE:63:9F:39:E2:70:D0:29:88:3A">
+        <permission name="android.permission.POST_NOTIFICATIONS" fixed="false"/>
+    </exception>
+
+    <exception
+            package="com.baidu.searchbox"
+            sha256-cert-digest="A6:EF:81:7B:FD:6C:08:34:42:A1:49:85:6E:51:03:6F:69:12:C2:DB:6B:60:09:DB:81:27:CD:D6:41:E2:95:A9">
+        <permission name="android.permission.POST_NOTIFICATIONS" fixed="false"/>
+    </exception>
+
+    <exception
+            package="com.quark.browser"
+            sha256-cert-digest="BB:E2:FF:26:98:28:A0:D9:22:49:8E:E8:7F:65:AF:E7:69:C2:7D:62:F4:89:D5:C1:9B:9C:C6:C4:44:C8:08:11">
+        <permission name="android.permission.POST_NOTIFICATIONS" fixed="false"/>
+    </exception>
+
+    <exception
+            package="com.autonavi.minimap"
+            sha256-cert-digest="B3:6C:0B:80:CB:24:17:E7:FE:4C:3D:F0:1A:2D:16:3A:7D:84:43:60:4D:D2:76:A2:BC:1A:B0:D3:25:10:2E:3E">
+        <permission name="android.permission.POST_NOTIFICATIONS" fixed="false"/>
+    </exception>
+
+    <exception
+            package="com.UCMobile"
+            sha256-cert-digest="BB:E2:FF:26:98:28:A0:D9:22:49:8E:E8:7F:65:AF:E7:69:C2:7D:62:F4:89:D5:C1:9B:9C:C6:C4:44:C8:08:11">
+        <permission name="android.permission.POST_NOTIFICATIONS" fixed="false"/>
+    </exception>
+
+    <exception
+            package="com.zte.personalagent">
+        <permission name="android.permission.POST_NOTIFICATIONS" fixed="false"/>
+    </exception>
+</exceptions>
