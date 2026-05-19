@@ -1,0 +1,28 @@
+/dts-v1/;
+
+/ {
+	model = "Qualcomm technologies, Inc. MALABAR RUMI";
+	compatible = "qcom,malabar-rumi", "qcom,malabar", "qcom,rumi";
+	qcom,msm-id = <0x2dd 0x10000>;
+
+	fragment@0 {
+		target = <0xffffffff>;
+
+		__overlay__ {
+			clock-frequency = <0x2ee00>;
+		};
+	};
+
+	fragment@1 {
+		target = <0xffffffff>;
+
+		__overlay__ {
+			clock-frequency = <0x2ee00>;
+		};
+	};
+
+	__fixups__ {
+		arch_timer = "/fragment@0:target:0";
+		memtimer = "/fragment@1:target:0";
+	};
+};

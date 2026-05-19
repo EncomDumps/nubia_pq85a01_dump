@@ -1,0 +1,14 @@
+# qssi_64-user 16 BQ2A.250705.001-BP2A.250605.031.A3 20260305.164324 release-keys
+- manufacturer: nubia
+- platform: canoe
+- codename: PQ85A01
+- flavor: qssi_64-user
+- release: 16
+- id: BQ2A.250705.001-BP2A.250605.031.A3
+- incremental: 20260305.164324
+- tags: release-keys
+- fingerprint: nubia/CN_PQ85A01/PQ85A01:16/BQ2A.250705.001-BP2A.250605.031.A3/20260302.164046:user/release-keys
+- is_ab: true
+- brand: nubia
+- branch: qssi_64-user-16-BQ2A.250705.001-BP2A.250605.031.A3-20260305.164324-release-keys
+- repo: nubia_pq85a01_dump

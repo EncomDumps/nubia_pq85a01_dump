@@ -1,0 +1,326 @@
+/dts-v1/;
+
+/ {
+	model = "Qualcomm Technologies, Inc. Chora SoC";
+	compatible = "qcom,chora";
+	qcom,msm-id = <0x2d4 0x10000>;
+	interrupt-parent = <0x01>;
+	#address-cells = <0x02>;
+	#size-cells = <0x02>;
+	qcom,board-id = <0x00 0x00>;
+
+	memory {
+		device_type = "memory";
+		reg = <0x00 0x00 0x00 0x00>;
+	};
+
+	aliases {
+	};
+
+	chosen {
+		bootargs = "nokaslr kpti=0 log_buf_len=256K swiotlb=0";
+		phandle = <0x0d>;
+	};
+
+	cpus {
+		#address-cells = <0x02>;
+		#size-cells = <0x00>;
+
+		cpu@0 {
+			device_type = "cpu";
+			compatible = "qcom,kryo";
+			reg = <0x00 0x00>;
+			enable-method = "psci";
+			next-level-cache = <0x02>;
+			phandle = <0x05>;
+
+			l2-cache {
+				compatible = "arm,arch-cache";
+				cache-level = <0x02>;
+				next-level-cache = <0x03>;
+				phandle = <0x02>;
+
+				l3-cache {
+					compatible = "arm,arch-cache";
+					cache-level = <0x03>;
+					phandle = <0x03>;
+				};
+			};
+		};
+
+		cpu@100 {
+			device_type = "cpu";
+			compatible = "qcom,kryo";
+			reg = <0x00 0x100>;
+			enable-method = "psci";
+			next-level-cache = <0x02>;
+			phandle = <0x06>;
+		};
+
+		cpu@200 {
+			device_type = "cpu";
+			compatible = "qcom,kryo";
+			reg = <0x00 0x200>;
+			enable-method = "psci";
+			next-level-cache = <0x02>;
+			phandle = <0x07>;
+		};
+
+		cpu@300 {
+			device_type = "cpu";
+			compatible = "qcom,kryo";
+			reg = <0x00 0x300>;
+			enable-method = "psci";
+			next-level-cache = <0x02>;
+			phandle = <0x08>;
+		};
+
+		cpu@400 {
+			device_type = "cpu";
+			compatible = "qcom,kryo";
+			reg = <0x00 0x400>;
+			enable-method = "psci";
+			next-level-cache = <0x04>;
+			phandle = <0x09>;
+
+			l2-cache {
+				compatible = "arm,arch-cache";
+				cache-level = <0x02>;
+				next-level-cache = <0x03>;
+				phandle = <0x04>;
+			};
+		};
+
+		cpu@500 {
+			device_type = "cpu";
+			compatible = "qcom,kryo";
+			reg = <0x00 0x500>;
+			enable-method = "psci";
+			next-level-cache = <0x04>;
+			phandle = <0x0a>;
+		};
+
+		cpu@600 {
+			device_type = "cpu";
+			compatible = "qcom,kryo";
+			reg = <0x00 0x600>;
+			enable-method = "psci";
+			next-level-cache = <0x04>;
+			phandle = <0x0b>;
+		};
+
+		cpu@700 {
+			device_type = "cpu";
+			compatible = "qcom,kryo";
+			reg = <0x00 0x700>;
+			enable-method = "psci";
+			next-level-cache = <0x04>;
+			phandle = <0x0c>;
+		};
+
+		cpu-map {
+
+			cluster0 {
+
+				core0 {
+					cpu = <0x05>;
+				};
+
+				core1 {
+					cpu = <0x06>;
+				};
+
+				core2 {
+					cpu = <0x07>;
+				};
+
+				core3 {
+					cpu = <0x08>;
+				};
+			};
+
+			cluster1 {
+
+				core0 {
+					cpu = <0x09>;
+				};
+
+				core1 {
+					cpu = <0x0a>;
+				};
+
+				core2 {
+					cpu = <0x0b>;
+				};
+
+				core3 {
+					cpu = <0x0c>;
+				};
+			};
+		};
+	};
+
+	firmware {
+		phandle = <0x0e>;
+
+		qcom_scm {
+			phandle = <0x0f>;
+		};
+	};
+
+	reserved-memory {
+		phandle = <0x10>;
+	};
+
+	soc {
+		#address-cells = <0x01>;
+		#size-cells = <0x01>;
+		ranges = <0x00 0x00 0x00 0xffffffff>;
+		compatible = "simple-bus";
+		phandle = <0x11>;
+
+		psci {
+			compatible = "arm,psci-1.0";
+			method = "smc";
+			phandle = <0x12>;
+		};
+
+		interrupt-controller@17200000 {
+			compatible = "arm,gic-v3";
+			#interrupt-cells = <0x03>;
+			interrupt-controller;
+			#redistributor-regions = <0x01>;
+			redistributor-stride = <0x00 0x20000>;
+			reg = <0x17200000 0x10000 0x17260000 0x100000>;
+			interrupts = <0x01 0x09 0x08>;
+			#address-cells = <0x01>;
+			#size-cells = <0x01>;
+			phandle = <0x01>;
+
+			msi-controller@17240000 {
+				compatible = "arm,gic-v3-its";
+				msi-controller;
+				#msi-cells = <0x01>;
+				reg = <0x17240000 0x20000>;
+				phandle = <0x13>;
+			};
+		};
+
+		timer {
+			compatible = "arm,armv8-timer";
+			interrupts = <0x01 0x0d 0xff08 0x01 0x0e 0xff08 0x01 0x0b 0xff08 0x01 0x0a 0xff08>;
+			clock-frequency = <0x124f800>;
+			phandle = <0x14>;
+		};
+
+		timer@17420000 {
+			#address-cells = <0x01>;
+			#size-cells = <0x01>;
+			ranges;
+			compatible = "arm,armv7-timer-mem";
+			reg = <0x17420000 0x1000>;
+			clock-frequency = <0x124f800>;
+			phandle = <0x15>;
+
+			frame@17421000 {
+				frame-number = <0x00>;
+				interrupts = <0x00 0x08 0x04 0x00 0x06 0x04>;
+				reg = <0x17421000 0x1000 0x17422000 0x1000>;
+			};
+
+			frame@17423000 {
+				frame-number = <0x01>;
+				interrupts = <0x00 0x09 0x04>;
+				reg = <0x17423000 0x1000>;
+				status = "disabled";
+			};
+
+			frame@17425000 {
+				frame-number = <0x02>;
+				interrupts = <0x00 0x0a 0x04>;
+				reg = <0x17425000 0x1000>;
+				status = "disabled";
+			};
+
+			frame@17427000 {
+				frame-number = <0x03>;
+				interrupts = <0x00 0x0b 0x04>;
+				reg = <0x17427000 0x1000>;
+				status = "disabled";
+			};
+
+			frame@17429000 {
+				frame-number = <0x04>;
+				interrupts = <0x00 0x0c 0x04>;
+				reg = <0x17429000 0x1000>;
+				status = "disabled";
+			};
+
+			frame@1742b000 {
+				frame-number = <0x05>;
+				interrupts = <0x00 0x0d 0x04>;
+				reg = <0x1742b000 0x1000>;
+				status = "disabled";
+			};
+
+			frame@1742d000 {
+				frame-number = <0x06>;
+				interrupts = <0x00 0x0e 0x04>;
+				reg = <0x1742d000 0x1000>;
+				status = "disabled";
+			};
+		};
+
+		qcom,ipcc@404000 {
+			compatible = "qcom,ipcc";
+			reg = <0x404000 0x1000>;
+			interrupts = <0x00 0x100 0x04>;
+			interrupt-controller;
+			#interrupt-cells = <0x03>;
+			#mbox-cells = <0x02>;
+			phandle = <0x16>;
+		};
+
+		pinctrl@f100000 {
+			compatible = "qcom,chora-tlmm";
+			reg = <0xf100000 0xf00000>;
+			gpio-controller;
+			#gpio-cells = <0x02>;
+			interrupt-controller;
+			#interrupt-cells = <0x02>;
+			interrupts = <0x00 0xd0 0x04>;
+			phandle = <0x17>;
+		};
+
+		smmu {
+			phandle = <0x18>;
+		};
+	};
+
+	__symbols__ {
+		chosen = "/chosen";
+		CPU0 = "/cpus/cpu@0";
+		L2_0 = "/cpus/cpu@0/l2-cache";
+		L3_0 = "/cpus/cpu@0/l2-cache/l3-cache";
+		CPU1 = "/cpus/cpu@100";
+		CPU2 = "/cpus/cpu@200";
+		CPU3 = "/cpus/cpu@300";
+		CPU4 = "/cpus/cpu@400";
+		L2_4 = "/cpus/cpu@400/l2-cache";
+		CPU5 = "/cpus/cpu@500";
+		CPU6 = "/cpus/cpu@600";
+		CPU7 = "/cpus/cpu@700";
+		firmware = "/firmware";
+		qcom_scm = "/firmware/qcom_scm";
+		reserved_memory = "/reserved-memory";
+		soc = "/soc";
+		psci = "/soc/psci";
+		intc = "/soc/interrupt-controller@17200000";
+		gic_its = "/soc/interrupt-controller@17200000/msi-controller@17240000";
+		arch_timer = "/soc/timer";
+		memtimer = "/soc/timer@17420000";
+		ipcc_mproc = "/soc/qcom,ipcc@404000";
+		tlmm = "/soc/pinctrl@f100000";
+		apps_smmu = "/soc/smmu";
+	};
+};
