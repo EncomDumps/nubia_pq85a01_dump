@@ -1,0 +1,62 @@
+{
+  "Metadata": {
+    "Created": "2022-01-27",
+    "Description": "Haptic editor design",
+    "Version": 1
+  },
+  "Pattern": [
+    {
+      "Event": {
+        "Duration": 102,
+        "Parameters": {
+          "Curve": [
+            {
+              "Frequency": 0,
+              "Intensity": 0.0,
+              "Time": 0
+            },
+            {
+              "Frequency": 0,
+              "Intensity": 1.0,
+              "Time": 26
+            },
+            {
+              "Frequency": 0,
+              "Intensity": 0.68,
+              "Time": 65
+            },
+            {
+              "Frequency": 0,
+              "Intensity": 0.0,
+              "Time": 102
+            }
+          ],
+          "Frequency": 30,
+          "Intensity": 58
+        },
+        "Type": "continuous",
+        "RelativeTime": 0
+      }
+    },
+    {
+      "Event": {
+        "Parameters": {
+          "Frequency": 65,
+          "Intensity": 100
+        },
+        "Type": "transient",
+        "RelativeTime": 118
+      }
+    },
+    {
+      "Event": {
+        "Parameters": {
+          "Frequency": 64,
+          "Intensity": 68
+        },
+        "Type": "transient",
+        "RelativeTime": 150
+      }
+    }
+  ]
+}
