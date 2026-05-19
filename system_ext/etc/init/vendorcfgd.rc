@@ -1,0 +1,4 @@
+service vendorcfgd /system_ext/bin/vendorcfgdeamon
+    class main
+    user root
+    socket vendorcfgd stream 0660 system system

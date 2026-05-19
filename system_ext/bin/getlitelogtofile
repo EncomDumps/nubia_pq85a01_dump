@@ -1,0 +1,191 @@
+#!/system/bin/sh
+
+export PATH=/vendor/xbin:$PATH
+
+
+
+SYSDIR=/data/local
+LOGDIR=$SYSDIR/lite_logs
+LOGS_DIR=lite_logs
+
+LAST_KMSG_FILE=/proc/last_kmsg
+PROCFS_PATH=/proc
+INTERVAL_MAIN=30
+
+
+function debug()
+{
+    echo $1
+    #echo $1 >>$LOGDIR/getlogdebug.txt
+}
+
+function my_logcat
+{
+    while true
+    do
+        logcat $*
+        sleep 1
+    done
+}
+
+function logcat_to_file()
+{
+    my_logcat -b main -f $LOGDIR/logcat/logcat_main.txt -r10240 -n5 -v threadtime *:D  &
+    my_logcat -b system -f $LOGDIR/logcat/logcat_system.txt -r10240 -n5 -v threadtime *:D PowerTracker:S &
+    my_logcat -b radio -f $LOGDIR/logcat/logcat_radio.txt -r10240 -n5 -v threadtime *:D  &
+}
+
+function change_files_mod()
+{
+    debug "change_files_mod begin"
+    #chmod logcat from 755 to 777 for RIL exception log ZTE_yangxiangling_2017212
+    chmod 777 $LOGDIR/logcat
+    chmod -R 755  $LOGDIR/logcat/*
+    debug "change_files_mod end"
+}
+
+
+function mainloop()
+{
+    debug "mainloop begin"
+    local interval=0
+    local e
+    local next
+
+    #kmsg
+    for e in ${crontab[@]}
+    do
+        eval next=\${${e}[0]}
+        eval interval=\${${e}[1]}
+        debug "cur:$e $next $interval $sys_uptime"
+        if [ "$sys_uptime" -ge "$next" ] ;then
+            interval=$(($interval + $sys_uptime))
+            eval ${e}[0]=\$interval
+            eval next=\${${e}[0]}
+            debug "next:$next $interval $sys_uptime"
+            eval local len=\${#${e}[@]}
+            local funi=2
+            while [ $funi -lt $len ]
+            do
+                eval \${${e}[$funi]}
+                eval debug \${${e}[$funi]}
+                funi=$(($funi + 1))
+            done
+        fi
+    done
+
+    debug "mainloop end"
+}
+
+function need_log
+{
+    local total=`du -s $LOGDIR | awk '{print $1}'`
+
+    if [ "$total" -ge "25600‬" ]; then
+        debug "$LOGDIR is over 50M, don't capture log"
+        return 1
+    fi
+    return 0
+}
+
+function delete_logs
+{
+    rm $LOGDIR/loglast[1-9]*.gz
+}
+
+function delete_logs_low
+{
+    total=`du -s $LOGDIR | awk '{print $1}'`
+
+    if [ "$total" -ge "20480" ]; then
+        debug "$LOGDIR is over 20M, delete some log"
+        delete_logs
+    fi
+}
+
+
+mkdir $LOGDIR
+mkdir $LOGDIR/logcat
+
+
+cd $SYSDIR
+tar czf $LOGDIR/loglast1.tar.gz $LOGS_DIR/logcat
+
+
+rm -r $LOGS_DIR/logcat/*
+rm -r $LOGS_DIR/*.txt
+rm -r $LOGS_DIR/*.log
+
+rm -r $LOGS_DIR/kernel/*
+rm -r $LOGS_DIR/tz/*
+rm -r $LOGS_DIR/data_kernel/*
+rm -r $LOGS_DIR/smem/*
+rm -r $LOGS_DIR/smem*.tar.gz
+rm -r $LOGS_DIR/modem/*
+rm -r $LOGS_DIR/gpu/*
+rm -r $LOGS_DIR/bootloader/*
+rm -r $LOGS_DIR/fgcharger/*
+rm -r $LOGS_DIR/media/*
+rm -r $LOGS_DIR/recovery/*
+rm -r $LOGS_DIR/resetlog/*
+
+rm -r $LOGS_DIR/kernel/
+rm -r $LOGS_DIR/tz/
+rm -r $LOGS_DIR/data_kernel/
+rm -r $LOGS_DIR/smem/
+rm -r $LOGS_DIR/modem/
+rm -r $LOGS_DIR/gpu/
+rm -r $LOGS_DIR/bootloader/
+rm -r $LOGS_DIR/fgcharger/
+rm -r $LOGS_DIR/media/
+rm -r $LOGS_DIR/recovery/
+rm -r $LOGS_DIR/resetlog/
+
+
+rm -r $LOGS_DIR/loglast5.tar.gz
+rm -r $LOGS_DIR/loglast4.tar.gz
+rm -r $LOGS_DIR/loglast3.tar.gz
+rm -r $LOGS_DIR/loglast2.tar.gz
+rm -r $LOGS_DIR/loglast1.tar.gz
+
+chown system.root $LOGDIR/logcat/
+chmod -R 775 $LOGDIR/
+
+logcat_to_file
+
+chmod -R 775 $LOGDIR/
+
+sys_uptime=$INTERVAL_MAIN
+
+while true
+do
+    uptime0=`cat /proc/uptime | awk '{print $1}'`
+    uptime0=${uptime0/\.*/}
+
+    debug "time: $sys_uptime"
+
+    if need_log ; then
+        mainloop
+    else
+        debug "donot log"
+        delete_logs
+    fi
+    change_files_mod
+    delete_logs_low
+    uptime1=`cat /proc/uptime | awk '{print $1}'`
+    uptime1=${uptime1/\.*/}
+    sec=$(($uptime0 + $INTERVAL_MAIN - $uptime1))
+
+    if [ -z "$sec" ]; then
+        sec=$INTERVAL_MAIN
+    fi
+
+    if [ "$sec" -gt "30" -o  "$sec" -le "0" ]; then
+        debug "sec error $sec, reset it"
+        sec=$INTERVAL_MAIN
+    fi
+
+    debug "need to sleep $sec"
+    sleep $sec
+    sys_uptime=$(($sys_uptime + $INTERVAL_MAIN))
+done

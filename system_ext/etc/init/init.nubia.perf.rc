@@ -1,0 +1,169 @@
+#nubia add for performance
+#
+#Performance optimization extension centralized modification for easy to maintain and porting, reduce conflict and redundancy.
+#
+
+on post-fs-data
+    #nubia add for critical thread
+    chmod 0664 /sys/nbia/sched_nbia_render_tid_array
+    chown system system /sys/nbia/sched_nbia_render_tid_array
+
+    chmod 0664 /sys/nbia/sched_prio_adjusted_info
+    chown system system /sys/nbia/sched_prio_adjusted_info
+
+    chmod 0664 /sys/nbia/sched_affinity_ctrl
+    chown system system /sys/nbia/sched_affinity_ctrl
+
+    chmod 0664 /sys/nbia/sched_class_persisted
+    chown system system /sys/nbia/sched_class_persisted
+
+    chmod 0664 /sys/nbia/sched_class_persisted_active_tms
+    chown system system /sys/nbia/sched_class_persisted_active_tms
+
+    chmod 0664 /sys/nbia/sched_early_upmigrate
+    chown system system /sys/nbia/sched_early_upmigrate
+
+    chmod 0664 /sys/nbia/sched_early_downmigrate
+    chown system system /sys/nbia/sched_early_downmigrate
+
+    chmod 0664 /dev/cpuset/bigcluster/cgroup.procs
+    chown system system  /dev/cpuset/bigcluster/cgroup.procs
+
+# ifas start
+on post-fs-data && property:ro.vendor.feature.zte_feature_ifas=true
+    chmod 0660 /sys/kernel/ifas/cpu_min_freq_limit_cluster0
+    chown system system  /sys/kernel/ifas/cpu_min_freq_limit_cluster0
+
+    chmod 0660 /sys/kernel/ifas/cpu_min_freq_limit_cluster1
+    chown system system  /sys/kernel/ifas/cpu_min_freq_limit_cluster1
+
+    chmod 0660 /sys/kernel/ifas/cpu_min_freq_limit_cluster2
+    chown system system  /sys/kernel/ifas/cpu_min_freq_limit_cluster2
+
+    chmod 0660 /sys/kernel/ifas/cpu_min_freq_limit_cluster3
+    chown system system  /sys/kernel/ifas/cpu_min_freq_limit_cluster3
+
+    chmod 0660 /sys/kernel/ifas/cpu_max_freq_limit_cluster0
+    chown system system  /sys/kernel/ifas/cpu_max_freq_limit_cluster0
+
+    chmod 0660 /sys/kernel/ifas/cpu_max_freq_limit_cluster1
+    chown system system  /sys/kernel/ifas/cpu_max_freq_limit_cluster1
+
+    chmod 0660 /sys/kernel/ifas/cpu_max_freq_limit_cluster2
+    chown system system  /sys/kernel/ifas/cpu_max_freq_limit_cluster2
+
+    chmod 0660 /sys/kernel/ifas/cpu_max_freq_limit_cluster3
+    chown system system  /sys/kernel/ifas/cpu_max_freq_limit_cluster3
+
+    chmod 0660 /sys/kernel/ifas/gpu_max_pwrlevel_limit
+    chown system system  /sys/kernel/ifas/gpu_max_pwrlevel_limit
+
+    chmod 0660 /sys/kernel/ifas/gpu_min_pwrlevel_limit
+    chown system system  /sys/kernel/ifas/gpu_min_pwrlevel_limit
+
+    chmod 0660 /sys/kernel/ifas/cpu_max_freq_ceiling_cluster0
+    chown system system  /sys/kernel/ifas/cpu_max_freq_ceiling_cluster0
+
+    chmod 0660 /sys/kernel/ifas/cpu_max_freq_ceiling_cluster1
+    chown system system  /sys/kernel/ifas/cpu_max_freq_ceiling_cluster1
+
+    chmod 0660 /sys/kernel/ifas/cpu_max_freq_ceiling_cluster2
+    chown system system  /sys/kernel/ifas/cpu_max_freq_ceiling_cluster2
+
+    chmod 0660 /sys/kernel/ifas/cpu_max_freq_ceiling_cluster3
+    chown system system  /sys/kernel/ifas/cpu_max_freq_ceiling_cluster3
+
+    chmod 0660 /sys/kernel/ifas/gpu_max_pwrlevel_ceiling
+    chown system system  /sys/kernel/ifas/gpu_max_pwrlevel_ceiling
+
+    chmod 0660 /sys/module/ifas/parameters/ifas_enable
+    chown system system  /sys/module/ifas/parameters/ifas_enable
+
+    chmod 0660 /sys/module/ifas/parameters/rescue_freq_level_up
+    chown system system  /sys/module/ifas/parameters/rescue_freq_level_up
+
+    chmod 0660 /sys/module/ifas/parameters/rescue_freq_level_down
+    chown system system  /sys/module/ifas/parameters/rescue_freq_level_down
+
+    chmod 0660 /sys/module/ifas/parameters/normal_frame_keep_count
+    chown system system  /sys/module/ifas/parameters/normal_frame_keep_count
+
+    chmod 0660 /sys/module/ifas/parameters/jank_frame_keep_count
+    chown system system  /sys/module/ifas/parameters/jank_frame_keep_count
+
+    chmod 0660 /sys/module/ifas/parameters/jank_frame_delta
+    chown system system  /sys/module/ifas/parameters/jank_frame_delta
+
+    chmod 0660 /sys/module/ifas/parameters/fixed_target_fps
+    chown system system  /sys/module/ifas/parameters/fixed_target_fps
+
+    chmod 0660 /sys/module/ifas/parameters/scaling_a
+    chown system system  /sys/module/ifas/parameters/scaling_a
+
+    chmod 0660 /sys/module/ifas/parameters/scaling_b
+    chown system system  /sys/module/ifas/parameters/scaling_b
+
+    chmod 0660 /sys/module/ifas/parameters/scaling_c
+    chown system system  /sys/module/ifas/parameters/scaling_c
+
+    chmod 0660 /sys/module/ifas/parameters/load_reset
+    chown system system  /sys/module/ifas/parameters/load_reset
+
+    chmod 0660 /sys/module/ifas/parameters/load_scaling_x
+    chown system system  /sys/module/ifas/parameters/load_scaling_x
+
+    chmod 0660 /sys/module/ifas/parameters/load_scaling_y
+    chown system system  /sys/module/ifas/parameters/load_scaling_y
+
+    chmod 0660 /sys/module/ifas/parameters/delay_num_frame
+    chown system system  /sys/module/ifas/parameters/delay_num_frame
+
+    chmod 0660 /sys/module/ifas/parameters/single_frame_boost
+    chown system system  /sys/module/ifas/parameters/single_frame_boost
+
+    chmod 0660 /sys/module/ifas/parameters/single_frame_up
+    chown system system  /sys/module/ifas/parameters/single_frame_up
+
+    chmod 0660 /sys/module/ifas/parameters/enable_gpu_policy
+    chown system system  /sys/module/ifas/parameters/enable_gpu_policy
+
+    chmod 0660 /sys/module/ifas/parameters/rescue_gpu_level_up
+    chown system system  /sys/module/ifas/parameters/rescue_gpu_level_up
+
+    chmod 0660 /sys/module/ifas/parameters/rescue_gpu_level_down
+    chown system system  /sys/module/ifas/parameters/rescue_gpu_level_down
+
+    chmod 0660 /sys/module/ifas/parameters/gpu_stepup_scaling
+    chown system system  /sys/module/ifas/parameters/gpu_stepup_scaling
+
+    chmod 0660 /sys/module/ifas/parameters/gpu_stepdown_scaling
+    chown system system  /sys/module/ifas/parameters/gpu_stepdown_scaling
+
+    chmod 0660 /sys/module/ifas/parameters/cpu_loading_high
+    chown system system  /sys/module/ifas/parameters/cpu_loading_high
+
+    chmod 0660 /sys/module/ifas/parameters/cpu_loading_low
+    chown system system  /sys/module/ifas/parameters/cpu_loading_low
+
+    chmod 0660 /sys/module/ifas/parameters/cpu_loading_enable
+    chown system system  /sys/module/ifas/parameters/cpu_loading_enable
+
+    chmod 0660 /sys/module/ifas/parameters/gpu_loading_high
+    chown system system  /sys/module/ifas/parameters/gpu_loading_high
+
+    chmod 0660 /sys/module/ifas/parameters/gpu_loading_low
+    chown system system  /sys/module/ifas/parameters/gpu_loading_low
+
+    chmod 0660 /sys/module/ifas/parameters/target_scaling
+    chown system system  /sys/module/ifas/parameters/target_scaling
+
+    chmod 0660 /sys/module/ifas/parameters/accept_userset_gpu_freq_min
+    chown system system  /sys/module/ifas/parameters/accept_userset_gpu_freq_min
+
+    chmod 0660 /sys/module/ifas/parameters/ifas_detect_cpu_jank
+    chown system system  /sys/module/ifas/parameters/ifas_detect_cpu_jank
+# ifas end
+
+
+on property:nubia.perf.tencent.game.mode=1
+    chmod 0666 /storage/emulated/0/Android/data/${nubia.perf.tencent.game.pkg}/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Config/Android/UserCustom.ini

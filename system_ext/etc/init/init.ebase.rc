@@ -1,0 +1,41 @@
+service ebase_init /system_ext/bin/init.ebase.sh
+    user root
+    group root log cache system
+    disabled
+    oneshot
+
+service ebase_start /system_ext/bin/start.ebase.sh
+    user root
+    group root log cache system
+    disabled
+    oneshot
+
+service ebase_stop /system_ext/bin/stop.ebase.sh
+    user root
+    group root log cache system
+    disabled
+    oneshot
+
+service ebase_backup /system_ext/bin/backup.ebase.sh
+    user root
+    group root log cache system
+    disabled
+    oneshot
+
+service ebase_restore /system_ext/bin/restore.ebase.sh
+    user root
+    group root log cache system
+    disabled
+    oneshot
+
+on post-fs-data
+    mkdir /data/ebase 0770 system system
+    mkdir /data/ebase/tmp 0770 system system
+    mkdir /data/ebase/backup 0770 system system
+    mkdir /data/ebase/restore 0770 system system
+    chown root root /data/ebase/data
+    chmod 0700 /data/ebase/data
+    start ebase_init
+
+on property:persist.sys.stc=true
+    start ebase_stop

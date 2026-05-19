@@ -1,0 +1,4 @@
+service spacescan /system_ext/bin/space_scan
+    class core
+    user root
+    group root system shell media_rw ext_data_rw ext_obb_rw everybody

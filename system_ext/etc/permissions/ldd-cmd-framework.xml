@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<permissions>
+    <library name="com.zte.ldd.cmd.ZteLddCmdService"
+             file="/system_ext/framework/ldd-cmd-framework.jar"/>
+</permissions>

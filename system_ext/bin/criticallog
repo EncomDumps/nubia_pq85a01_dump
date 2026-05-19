@@ -1,0 +1,111 @@
+#!/system/bin/sh
+
+export PATH=/vendor/xbin:$PATH
+platform=`getprop ro.board.platform`
+CACHEDIR=/cache
+DATADIR=/data
+SYSDIR=/data/local
+LOGDIR=$SYSDIR/critical_logs
+LOGS_DIR=critical_logs
+
+LOGFS_IMG=/dev/block/bootdevice/by-name/logfs
+XBL_SC_LOGS=/dev/block/bootdevice/by-name/xbl_sc_logs
+
+
+function debug()
+{
+    echo $1
+}
+
+function save_bootloader_log()
+{
+    debug "save_bootloader_log begin"
+    debug "save_xbl_sc_logs"
+    if [[ "$platform" == "taro" ]] || [[ "$platform" == "kalama" ]] || [[ "$platform" == "pineapple" ]]; then
+        cat $XBL_SC_LOGS > $LOGDIR/bootloader/xbl_sc_logs.bin
+    fi
+
+    debug "save_logfs_log"
+    local logfs_enabled=`vendorcfg -cdump  2>&1 | grep "dbg.logfs.enable"`
+    logfs_enabled=${logfs_enabled##*[}
+    logfs_enabled=${logfs_enabled%%]*}
+    if [[ "$platform" == "taro" ]] || [[ "$platform" == "kalama" ]] || [[ "$platform" == "pineapple" ]]; then
+        local vendor_logcontrol_flag=`vendorcfg -cdump  2>&1 | grep "vendor.logcontrol.flag"`
+        vendor_logcontrol_flag=${vendor_logcontrol_flag##*[}
+        vendor_logcontrol_flag=${vendor_logcontrol_flag%%]*}
+        if [[ "$logfs_enabled" != "1" ]] && [[ "$vendor_logcontrol_flag" != "1" ]] && [[ "$vendor_logcontrol_flag" != "3" ]]; then
+            debug "logfs is not enabled"
+            return
+        fi
+    else
+        if [[ "$logfs_enabled" != "1" ]]; then
+            debug "logfs is not enabled"
+            return
+        fi
+    fi
+    cat $LOGFS_IMG > $LOGDIR/bootloader/logfs.bin
+    vendorcfg -cdump  2>&1 | grep -v "deviceid.sign.*" | grep -v "secure.user.id" | grep -v "EMPTY" > $LOGDIR/bootloader/vendorcfg.txt
+    chmod 755 $LOGDIR/bootloader/*
+    debug "save_bootloader_log end"
+}
+
+function baseinfo()
+{
+    debug "baseinfo begin"
+    echo "Service criticallog Started:" >> $LOGDIR/checkpoints/baseinfo.txt
+    uptime >>  $LOGDIR/checkpoints/baseinfo.txt
+    date >> $LOGDIR/checkpoints/baseinfo.txt
+    cat /proc/uptime  >> $LOGDIR/checkpoints/baseinfo.txt
+    echo "========================================" >> $LOGDIR/checkpoints/baseinfo.txt
+    echo "Kernel Version:" >> $LOGDIR/checkpoints/baseinfo.txt
+    cat /proc/version >> $LOGDIR/checkpoints/baseinfo.txt
+    cat /proc/cmdline >> $LOGDIR/checkpoints/baseinfo.txt
+    echo "========================================" >> $LOGDIR/checkpoints/baseinfo.txt
+    echo "Memory Info:" >> $LOGDIR/checkpoints/baseinfo.txt
+    cat /proc/meminfo >> $LOGDIR/checkpoints/baseinfo.txt
+    echo "========================================" >> $LOGDIR/checkpoints/baseinfo.txt
+    echo "Property:" >> $LOGDIR/checkpoints/baseinfo.txt
+    getprop  >> $LOGDIR/checkpoints/baseinfo.txt
+    echo "========================================" >> $LOGDIR/checkpoints/baseinfo.txt
+    echo "Hardware Info:" >> $LOGDIR/checkpoints/baseinfo.txt
+    if [ -e "/proc/driver/ddr_id" ]; then
+        cat /proc/driver/ddr_id >> $LOGDIR/checkpoints/baseinfo.txt
+    else
+        echo "/proc/driver/ddr_id not exist" >> $LOGDIR/checkpoints/baseinfo.txt
+    fi
+    if [ -e "/proc/driver/lcd_id" ]; then
+        cat /proc/driver/lcd_id >> $LOGDIR/checkpoints/baseinfo.txt
+    else
+        echo "/proc/driver/lcd_id not exist" >> $LOGDIR/checkpoints/baseinfo.txt
+    fi
+    echo "========================================" >> $LOGDIR/checkpoints/baseinfo.txt
+    debug "baseinfo end"
+}
+
+
+mkdir $LOGDIR
+mkdir $LOGDIR/checkpoints
+mkdir $LOGDIR/bootloader
+
+chown system.root $LOGDIR
+
+cd $SYSDIR
+mv $LOGDIR/loglast4.tar.gz $LOGDIR/loglast5.tar.gz
+mv $LOGDIR/loglast3.tar.gz $LOGDIR/loglast4.tar.gz
+mv $LOGDIR/loglast2.tar.gz $LOGDIR/loglast3.tar.gz
+mv $LOGDIR/loglast1.tar.gz $LOGDIR/loglast2.tar.gz
+
+debug "package lastlog begin"
+tar czf $LOGDIR/loglast1.tar.gz $LOGS_DIR/checkpoints  $LOGS_DIR/bootloader
+debug "package lastlog end"
+
+rm -r $LOGS_DIR/checkpoints/*
+rm -r $LOGS_DIR/bootloader/*
+debug "clear lastlog"
+
+chmod -R 775 $LOGDIR/
+chown system.root $LOGDIR/checkpoints
+save_bootloader_log
+baseinfo
+chmod -R 775 $LOGDIR/checkpoints
+chown -R system.root $LOGDIR/checkpoints
