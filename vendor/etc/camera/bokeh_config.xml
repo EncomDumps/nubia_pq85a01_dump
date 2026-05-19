@@ -1,0 +1,8 @@
+<?xml version="1.0" standalone="no"?>
+<bokeh_config>
+    <BokehConfigParam
+        ultra_ratio="0.367f" wide_ratio="1.0f" tele_ratio="2.025f"
+        wide_select_light_radius="60.0f" tele_select_light_radius="120.0f"
+        wide_bokeh_radius = "15.0f" tele_bokeh_radius = "20.0f">
+    </BokehConfigParam>
+</bokeh_config>

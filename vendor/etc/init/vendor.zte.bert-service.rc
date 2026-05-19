@@ -1,0 +1,6 @@
+service vendor.zte.bert-service /vendor/bin/hw/vendor.zte.bert-service
+        interface aidl vendor.zte.aimodel.IBertModel/default
+        class hal
+        user system
+        group system
+        

@@ -1,0 +1,6 @@
+service vendor.zte.bge-service /vendor/bin/hw/vendor.zte.bge-service
+        interface aidl vendor.zte.aimodel.IBgeModel/default
+        class hal
+        user system
+        group system
+        

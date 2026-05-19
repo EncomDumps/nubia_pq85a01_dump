@@ -1,0 +1,23 @@
+#
+# Copyright (c) 2025 ZTE Corporation.
+# All Rights Reserved.
+# Confidential and Proprietary - ZTE Corporation.
+#
+
+service init.NookModemDaemon.sh /vendor/bin/init.NookModemDaemon.sh
+    class late_start
+    user root
+    group system
+    oneshot
+
+service NookModemDaemon_0 /vendor/bin/NookModemDaemon -i 0
+    class late_start
+    user root
+    group system
+    disabled
+
+service NookModemDaemon_1 /vendor/bin/NookModemDaemon -i 1
+    class late_start
+    user root
+    group system
+    disabled

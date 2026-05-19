@@ -1,0 +1,9 @@
+on post-fs-data
+	mkdir /data/vendor/nebulamodel 0770 system system
+
+service vendor.zte.llm-service /vendor/bin/hw/vendor.zte.llm-service
+        interface aidl vendor.zte.aimodel.ILLModel/default
+        class hal
+        user system
+        group system
+        

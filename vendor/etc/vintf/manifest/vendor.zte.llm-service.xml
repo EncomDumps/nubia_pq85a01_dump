@@ -1,0 +1,10 @@
+<!--
+    Input:
+        vendor/zte/vendor_aimodelservice/llm/vendor.zte.llm-service.xml
+-->
+<manifest version="9.0" type="device">
+    <hal format="aidl">
+        <name>vendor.zte.aimodel</name>
+        <fqname>ILLModel/default</fqname>
+    </hal>
+</manifest>

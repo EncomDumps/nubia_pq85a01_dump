@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<zaudio_service xmlns:xi="http://www.w3.org/2001/XInclude">
+<features>
+    <feature name="MirrorMode" enable="true" mute_type="SW" sink_control="true"/>
+    <feature name="MagicChat" enable="true" version="V1">
+        <package_match>
+            <package id="com.tencent.ig" pattern="FULL" desc="PUBGM"/>
+            <package id="com.tencent.tmgp.sgame" pattern="FULL" desc="王者荣耀"/>
+            <package id=".pubgmhd" pattern="PARTIAL" desc="和平精英"/>
+            <package id=".cfm" pattern="PARTIAL" desc="三角洲行动"/>
+            <package id=".letsgo" pattern="PARTIAL" desc="圆梦之星"/>
+            <package id=".jkchess" pattern="PARTIAL" desc="金铲铲"/>
+            <package id=".miHoYo" pattern="PARTIAL" desc="米哈游"/>
+            <package id=".speedmobile" pattern="PARTIAL" desc="QQ飞车"/>
+            <package id=".lolm" pattern="PARTIAL" desc="英雄联盟"/>
+            <package id=".cf" pattern="PARTIAL" desc="穿越火线"/>
+            <package id=".mf.uam" pattern="PARTIAL" desc="暗区突围"/>
+            <package id=".KiHan" pattern="PARTIAL" desc="火影忍者"/>
+            <package id=".mingchao" pattern="PARTIAL" desc="鸣潮"/>
+            <package id=".cod" pattern="PARTIAL" desc="使命召唤"/>
+            <package id=".dnf" pattern="PARTIAL" desc="地下城"/>
+            <package id="com.netease.l22" pattern="PARTIAL" desc="永劫"/>
+            <package id="com.netease.x19" pattern="PARTIAL" desc="我的世界"/>
+            <package id=".clashofclans" pattern="PARTIAL" desc="部落冲突"/>
+            <package id=".arknights" pattern="PARTIAL" desc="明日方舟"/>
+            <package id=".nikke" pattern="PARTIAL" desc="胜利女神"/>
+            <package id=".dwrg" pattern="PARTIAL" desc="第五人格"/>
+            <package id=".qrsj" pattern="PARTIAL" desc="七日世界"/>
+            <package id="com.netease.party" pattern="PARTIAL" desc="蛋仔派对"/>
+            <package id=".projectsnow" pattern="PARTIAL" desc="尘白禁区"/>
+            <package id=".nshm" pattern="PARTIAL" desc="逆水寒"/>
+            <package id=".czrxdfirst" pattern="PARTIAL" desc="超自然行动组"/>
+            <package id=".azurlane" pattern="PARTIAL" desc="碧蓝航线"/>
+            <package id=".huluxia.gametools" pattern="PARTIAL" desc="葫芦侠"/>
+            <package id=".yyslscn" pattern="PARTIAL" desc="燕云十六声"/>
+            <package id=".zjcs" pattern="PARTIAL" desc="仗剑传说"/>
+            <package id=".nfsonline" pattern="PARTIAL" desc="飞车:集结"/>
+            <package id=".yhtj" pattern="PARTIAL" desc="萤火突击"/>
+            <package id=".qoohelper" pattern="PARTIAL" desc="东京地下城"/>
+            <package id=".hlddz" pattern="PARTIAL" desc="欢乐斗地主"/>
+            <package id=".silverblood" pattern="PARTIAL" desc="银与绯"/>
+            <package id="com.netease.g125" pattern="PARTIAL" desc="冰器时代"/>
+            <package id=".aceracer" pattern="PARTIAL" desc="王牌竞速"/>
+            <package id=".gnyx" pattern="PARTIAL" desc="高能英雄"/>
+            <package id=".mysy" pattern="PARTIAL" desc="魔域手游"/>
+            <package id="com.afk.journey" pattern="PARTIAL" desc="剑与远征2"/>
+            <package id="com.lilithgame.hgame.gp.kbinstaller" pattern="PARTIAL" desc="剑与远征"/>
+            <package id=".codev" pattern="PARTIAL" desc="无畏契约"/>
+        </package_match>
+    </feature>
+    <feature name="MagicVoice" enable="true" engine="YouMe"/>
+    <feature name="PerfVolumeSuppression" enable="true">
+        <target_devices>
+            <device name="speaker" id="2">
+                <section low="-58" high="-38" gain="-3"/>
+                <section low="-38" high="-17" gain="-6"/>
+                <section low="-17" high="0" gain="-9"/>
+            </device>
+        </target_devices>
+    </feature>
+    <feature name="Haptic4D" enable="true" />
+</features>
+
+<haptic4d_properties>
+    <haptic4d_property game_name="测试软件" >
+        <package_match>
+            <package id="stone.audiotestsuite" pattern="FULL" desc="测试用"/>
+        </package_match>
+        <sample_rates>44100 24000 48000</sample_rates>
+        <flags>AUDIO_OUTPUT_FLAG_DIRECT</flags>
+        <mode>4</mode>
+    </haptic4d_property>
+    <haptic4d_property game_name="狂野飙车" >
+        <package_match>
+            <package id="com.gameloft.android.ANMP.Gloft" pattern="PARTIAL" desc="国际系列官服"/>
+            <package id="kybc" pattern="PARTIAL" desc="其他渠道服"/>
+        </package_match>
+        <sample_rates>44100 24000 48000</sample_rates>
+        <flags>AUDIO_OUTPUT_FLAG_FAST</flags>
+        <mode>4</mode>
+    </haptic4d_property>
+
+    <haptic4d_property game_name="绝地求生" >
+        <package_match>
+            <package id="com.tencent.ig" pattern="FULL" desc="国际官服"/>
+            <package id="com.tencent.iglite" pattern="FULL" desc="国际官服轻量版"/>
+            <package id="com.vng.pubgmobile" pattern="FULL" desc="国际越南官服"/>
+            <package id="com.pubg.krmobile" pattern="FULL" desc="国际日韩官服"/>
+        </package_match>
+        <sample_rates>44100 24000 48000</sample_rates>
+        <flags>AUDIO_OUTPUT_FLAG_FAST</flags>
+        <mode>3</mode>
+        <notification_frame>-20,-84</notification_frame>
+    </haptic4d_property>
+
+    <haptic4d_property game_name="荒野行动" >
+        <package_match>
+            <package id="com.netease.ko" pattern="PARTIAL" desc="国际官服"/>
+            <package id="com.netease.hyxd" pattern="PARTIAL" desc="国内官服"/>
+        </package_match>
+        <sample_rates>44100 24000 48000</sample_rates>
+        <flags>AUDIO_OUTPUT_FLAG_FAST</flags>
+        <mode>1</mode>
+        <notification_frame>-12,-44</notification_frame>
+    </haptic4d_property>
+
+    <haptic4d_property game_name="城市飙车3D" >
+        <package_match>
+            <package id="com.racergame.cityracing3d" pattern="PARTIAL" desc="国际官服"/>
+        </package_match>
+        <sample_rates>44100 24000 48000</sample_rates>
+        <flags>AUDIO_OUTPUT_FLAG_FAST</flags>
+        <mode>7</mode>
+        <notification_frame>-20</notification_frame>
+    </haptic4d_property>
+
+    <haptic4d_property game_name="QQ飞车" >
+        <package_match>
+            <package id="com.tencent.tmgp.speedmobile" pattern="PARTIAL" desc="国内官服"/>
+        </package_match>
+        <sample_rates>44100 24000 48000</sample_rates>
+        <flags>AUDIO_OUTPUT_FLAG_FAST</flags>
+        <mode>8</mode>
+        <notification_frame>-20,-84</notification_frame>
+    </haptic4d_property>
+</haptic4d_properties>
+
+<dts_games>
+    <package desc="绝地求生">com.tencent.ig</package>
+    <package desc="绝地求生轻量版">com.tencent.iglite</package>
+    <package desc="绝地求生日韩服">com.pubg.krmobile</package>
+    <package desc="绝地求生越南服">com.vng.pubgmobile</package>
+    <package desc="王者荣耀">com.tencent.tmgp.sgame</package>
+    <package desc="荒野行动国内">com.netease.hyxd</package>
+    <package desc="荒野行动国际">com.netease.ko</package>
+    <package desc="巅峰急速国际">com.netease.race.ua</package>
+    <package desc="巅峰急速国内渠道服集合">com.netease.dfjs</package>
+    <package desc="巅峰急速国内官服">com.netease.racena</package>
+    <package desc="使命召唤国际">com.activision.callofduty.shooter</package>
+    <package desc="使命召唤越南">com.vng.codmvn</package>
+    <package desc="使命召唤港澳">com.tencent.tmgp.kr.codm</package>
+    <package desc="使命召唤国际">com.garena.game.codm</package>
+    <package desc="使命召唤腾讯">com.tencent.tmgp.cod</package>
+    <package desc="暗区突围国际">com.proximabeta.mf.uamo</package>
+    <package desc="暗区突围国内">com.tencent.mf.uam</package>
+    <package desc="和平精英">.pubgmhd</package>
+    <package desc="第五人格系列">.dwrg</package>
+    <package desc="三国杀系列">.sgs</package>
+    <package desc="QQ飞车">.speedmobile</package>
+    <package desc="英雄联盟手游">.lolm</package>
+    <package desc="米哈游官方应用">.miHoYo</package>
+    <package desc="跑跑卡丁车系列">.WePop</package>
+    <package desc="我的起源系列">.wdqy</package>
+    <package desc="贪吃蛇大作战系列">.snake</package>
+    <package desc="天天炫斗系列">.VXDGame</package>
+    <package desc="全面农场系列">.Qfarm</package>
+    <package desc="明日之后系列">.mrzh</package>
+    <package desc="开心消消乐系列">.AndroidAnimal</package>
+    <package desc="植物大战僵尸系列">.pvz2</package>
+    <package desc="战双帕弥什系列">.kurogame.haru</package>
+    <package desc="梦幻诛仙手游系列">.mhzxsy</package>
+    <package desc="地铁跑酷系列">.subwaysurf</package>
+    <package desc="疯狂的球球系列">.fkdqq</package>
+    <package desc="FIFA系列">.fifamobile</package>
+    <package desc="城市飙车系列">.cityracing3d</package>
+    <package desc="狂野飙车系列国内">.kybc</package>
+    <package desc="狂野飙车系列国际">.ANMP.Gloft</package>
+    <package desc="尘白禁区">.projectsnow</package>
+    <package desc="高能英雄">com.tencent.tmgp.gnyx</package>
+    <package desc="穿越火线">com.tencent.tmgp.cf</package>
+    <package desc="farlight84">com.miraclegames.farlight84</package>
+    <package>com.tencent.tmgp.dfm</package>
+</dts_games>
+
+<mmap_enabled_apps>
+        <package>org.chromium.latency.walt</package>
+</mmap_enabled_apps>
+
+<dts_scene_ingore_apps>
+    <package>cn.nubia.magicelvesbroadcast</package>
+    <package>cn.nubia.fan</package>
+    <package>cn.nubia.game</package>
+    <package>cn.zte.gamefloat</package>
+    <package>cn.nubia.redmagickyi</package>
+    <package>cn.nubia.virtualgamehandle</package>
+    <package>cn.nubia.gamehighlights</package>
+    <package>com.zte.onemorething</package>
+</dts_scene_ingore_apps>
+
+<color_light_ignore_apps>
+    <package>cn.zte.recorder</package>
+    <package>com.baidu.BaiduMap</package>
+    <package>com.autonavi.minimap</package>
+    <package>com.google.android.apps.maps</package>
+    <package>com.vectorunit.blue</package>
+    <package>android.media.cts</package>
+    <package>android.media.audio.cts</package>
+    <package>android.media.player.cts</package>
+    <package>com.ximalaya.ting.android</package>
+    <package>com.kuaishou.nebula</package>
+    <package>com.babycloud.hanju</package>
+    <package>com.ss.android.ugc.aweme</package>
+    <package>com.smile.gifmaker</package>
+    <package>com.dragon.read</package>
+    <package>com.shinyv.cnr</package>
+</color_light_ignore_apps>
+
+<color_light_video_apps>
+    <package>com.android.settings</package>
+    <package>com.zte.RetailShow</package>
+    <package>com.google.android.apps.youtube.music</package>
+    <package>com.google.android.youtube</package>
+    <package>com.spotify.music</package>
+    <package>com.netease.cloudmusic</package>
+    <package>cn.nubia.gamelauncher</package>
+    <package>com.tencent.qqmusic</package>
+    <package>iting.mpmusicplayer.free</package>
+</color_light_video_apps>
+
+
+<color_light_enforce_apps>
+    <package>com.netease.cloudmusic</package>
+    <package>com.tencent.qqmusic</package>
+    <package>com.ximalaya.ting.android</package>
+    <package>com.luna.music</package>
+    <package>com.kugou.android</package>
+    <package>cn.kuwo.player</package>
+    <package>cn.missevan</package>
+    <package>fm.qingting.qtradio</package>
+    <package>cn.wenyu.bodian</package>
+    <package>cmccwm.mobilemusic</package>
+    <package>com.yibasan.lizhifm</package>
+    <package>com.vvvdj.player</package>
+    <package>com.xintiaoapp.dunn</package>
+    <package>com.google.android.apps.youtube.music</package>
+    <package>com.apple.android.music</package>
+    <package>com.iloen.melon</package>
+    <package>com.aspiro.tidal</package>
+    <package>deezer.android.app</package>
+    <package>com.pandora.android</package>
+    <package>com.soundcloud.android</package>
+    <package>com.tencent.ibg.joox</package>
+    <package>jp.linecorp.linemusic.android</package>
+    <package>com.spotify.music</package>
+    <package>com.amazon.mp3</package>
+    <package>com.kugou.android.lite</package>
+    <package>com.kwai.hisense</package>
+    <package>com.bose.bosemusic.china</package>
+    <package>com.sony.songpal</package>
+    <package>com.musicplayer.playermusic</package>
+    <package>com.dywx.larkplayer</package>
+    <package>com.telcel.imk</package>
+    <package>com.shazam.android</package>
+    <package>com.hiby.music</package>
+    <package>com.melodis.midomiMusicIdentifier.freemium</package>
+    <package>musicplayer.musicapps.music.mp3player</package>
+    <package>com.mxtech.videoplayer.ad</package>
+    <package>com.mmm.trebelmusic</package>
+    <package>com.maxmpz.audioplayer</package>
+    <package>com.musicplayer.blackplayerfree</package>
+    <package>com.shaiban.audioplayer.mplayer</package>
+    <package>com.claro.claromusica.latam</package>
+    <package>com.google.android.youtube</package>
+    <package>com.zte.as.music</package>
+</color_light_enforce_apps>
+
+<color_light_enforce_games>
+    <package>com.gameloft.android.GloftDPMF</package>
+    <package>com.gameloft.android.GloftROLP</package>
+    <package>com.gameloft.android.GloftDBMF</package>
+    <package>com.mojang.minecrafttrialpe</package>
+    <package>com.mobile.legends</package>
+    <package>com.tencent.ig</package>
+    <package>com.miHoYo.GenshinImpact</package>
+    <package>com.carxtech.sr</package>
+    <package>com.dts.freefireth</package>
+    <package>com.ea.gp.fifamobile</package>
+    <package>com.garena.game.codm</package>
+    <package>com.miniclip.eightballpool</package>s
+    <package>com.roblox.client</package>
+</color_light_enforce_games>
+
+<translate_support_apps>
+    <package>com.tencent.mm</package>
+    <package>com.tencent.mobileqq</package>
+    <package>com.zte.softda</package>
+    <package>com.tencent.wemeet.app</package>
+    <package>com.alibaba.android.rimet</package>
+    <package>com.ss.android.lark</package>
+    <package require="FEATURE_MWC_RQ">com.whatsapp</package>
+</translate_support_apps>
+
+<translate_ignore_apps>
+    <package>com.zte.voiprecorder</package>
+    <package>com.zte.nebulatranslation</package>
+    <package>android</package>
+</translate_ignore_apps>
+
+<voip_record_apps>
+    <package key="enable_auto_record_wechat_key">com.tencent.mm</package>
+    <package key="enable_auto_record_qq_key">com.tencent.mobileqq</package>
+    <package key="enable_auto_record_wemeet_key">com.tencent.wemeet.app</package>
+    <package key="enable_auto_record_ding_key">com.alibaba.android.rimet</package>
+    <package key="enable_auto_record_wechat_enterprise_key">com.tencent.wework</package>
+</voip_record_apps>
+</zaudio_service>

@@ -1,0 +1,6 @@
+service vendor.zte.voice-service /vendor/bin/hw/vendor.zte.voice-service
+        interface aidl vendor.zte.aimodel.IVoiceModel/default
+        class hal
+        user system
+        group system
+        

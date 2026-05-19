@@ -1,0 +1,74 @@
+{
+  "usecases": [
+    {
+      "usecaseName": "CPUHeavy",
+      "MPAM":
+      {
+          "L2_0":
+            {
+              "cache_capacity": 100,
+              "cpbm_mask": "0xfff",
+              "prio": 0,
+              "slc_partid": 3
+            },
+          "L2_1":
+            {
+              "cache_capacity": 100,
+              "cpbm_mask": "0xfff",
+              "prio": 0,
+              "slc_partid": 3
+            },
+          "NoC_BW":
+            {
+              "cpu_cluster0": 4,
+              "cpu_cluster1": 4,
+              "gpu": 1,
+              "nsp": 1
+            },
+          "SLC":
+            {
+              "apps_partid0": 0,
+              "apps_partid1": 0,
+              "apps_partid2": 2,
+              "gpu": 0,
+              "nsp": 0
+            }
+      }
+    },
+    {
+      "usecaseName": "GPUHeavy",
+      "MPAM":
+      {
+          "L2_0":
+            {
+              "cache_capacity": 100,
+              "cpbm_mask": "0xfff",
+              "prio": 0,
+              "slc_partid": 3
+            },
+          "L2_1":
+            {
+              "cache_capacity": 100,
+              "cpbm_mask": "0xfff",
+              "prio": 0,
+              "slc_partid": 3
+            },
+          "NoC_BW":
+            {
+              "cpu_cluster0": 1,
+              "cpu_cluster1": 1,
+              "gpu": 4,
+              "nsp": 1
+            },
+          "SLC":
+            {
+              "apps_partid0": 2,
+              "apps_partid1": 2,
+              "apps_partid2": 2,
+              "gpu": 0,
+              "nsp": 0
+            }
+        }
+    }
+  ]
+}

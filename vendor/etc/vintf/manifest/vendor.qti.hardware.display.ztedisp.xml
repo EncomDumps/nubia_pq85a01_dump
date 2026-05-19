@@ -1,0 +1,10 @@
+<!--
+    Input:
+        hardware/qcom/display/composer/vendor.qti.hardware.display.ztedisp.xml
+-->
+<manifest version="9.0" type="device">
+    <hal format="aidl">
+        <name>vendor.qti.hardware.display.ztedisp</name>
+        <fqname>IZteDisplay/default</fqname>
+    </hal>
+</manifest>

@@ -1,0 +1,52 @@
+on property:sys.boot_completed=1
+    #ZTE permission to camera in PV version
+    mkdir /mnt/vendor/persist/camera 0777 system cameraserver
+    chown system cameraserver /mnt/vendor/persist/camera/dualcam_cali.bin
+    chmod 0644 /mnt/vendor/persist/camera/dualcam_cali.bin
+    chown system cameraserver /mnt/vendor/persist/camera/gyroofs.bin
+    chmod 0666 /mnt/vendor/persist/camera/gyroofs.bin
+    chown system cameraserver /mnt/vendor/persist/camera/tricam_cali_uwide.bin
+    chmod 0644 /mnt/vendor/persist/camera/tricam_cali_uwide.bin
+    chown system cameraserver /mnt/vendor/persist/camera/tricam_cali_tele.bin
+    chmod 0644 /mnt/vendor/persist/camera/tricam_cali_tele.bin
+    chown system cameraserver /mnt/vendor/persist/camera/tricam_stereo_0cali_tele.bin
+    chmod 0666 /mnt/vendor/persist/camera/tricam_stereo_0cali_tele.bin
+    chown system cameraserver /mnt/vendor/persist/camera/tricam_stereo_0cali_uwide.bin
+    chmod 0666 /mnt/vendor/persist/camera/tricam_stereo_0cali_uwide.bin
+
+    chown system input /sys/class/input/input4/period
+    chmod 0660 /sys/class/input/input4/period
+    chown system input /sys/class/input/input4/chip_enable
+    chmod 0660 /sys/class/input/input4/chip_enable
+    chown system input /sys/class/input/input4/chip_init
+    chmod 0660 /sys/class/input/input4/chip_init
+    chown system input /sys/class/input/input4/capture
+    chmod 0660 /sys/class/input/input4/capture
+    chown system input /sys/class/input/input4/xtalk_calib
+    chmod 0660 /sys/class/input/input4/xtalk_calib
+    chown system input /sys/class/input/input4/xtalk_calib_data
+    chmod 0660 /sys/class/input/input4/xtalk_calib_data
+    chown system input /sys/class/input/input4/offset_calib
+    chmod 0660 /sys/class/input/input4/offset_calib
+    chown system input /sys/class/input/input4/offset_calib_data
+    chmod 0660 /sys/class/input/input4/offset_calib_data
+
+    chown system input /sys/class/input/input5/period
+    chmod 0660 /sys/class/input/input5/period
+    chown system input /sys/class/input/input5/chip_enable
+    chmod 0660 /sys/class/input/input5/chip_enable
+    chown system input /sys/class/input/input5/chip_init
+    chmod 0660 /sys/class/input/input5/chip_init
+    chown system input /sys/class/input/input5/capture
+    chmod 0660 /sys/class/input/input5/capture
+    chown system input /sys/class/input/input5/xtalk_calib
+    chmod 0660 /sys/class/input/input5/xtalk_calib
+    chown system input /sys/class/input/input5/xtalk_calib_data
+    chmod 0660 /sys/class/input/input5/xtalk_calib_data
+    chown system input /sys/class/input/input5/offset_calib
+    chmod 0660 /sys/class/input/input5/offset_calib
+    chown system input /sys/class/input/input5/offset_calib_data
+    chmod 0660 /sys/class/input/input5/offset_calib_data
+
+    chown root root /dev/vi530x
+    chmod 0666 /dev/vi530x

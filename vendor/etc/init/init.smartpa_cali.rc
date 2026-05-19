@@ -1,0 +1,30 @@
+# add for smartpa calibration in normal version
+on post-fs-data
+    mkdir /data/vendor/smartpa
+    chown system system /data/vendor/smartpa
+    chmod 0700 /data/vendor/smartpa
+
+service smartpa_cali-0 /vendor/bin/smartpa_cali -s 0
+    class hal
+    user system
+    group system
+    disabled
+    oneshot
+service smartpa_cali-1 /vendor/bin/smartpa_cali -s 1
+    class hal
+    user system
+    group system
+    disabled
+    oneshot
+service smartpa_cali-2 /vendor/bin/smartpa_cali -s 2
+    class hal
+    user system
+    group system
+    disabled
+    oneshot
+service smartpa_cali-3 /vendor/bin/smartpa_cali -s 3
+    class hal
+    user system
+    group system
+    disabled
+    oneshot

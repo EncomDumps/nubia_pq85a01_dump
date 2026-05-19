@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+/* Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries.
+ * All rights reserved.
+ * Confidential and Proprietary - Qualcomm Technologies, Inc.
+ */
+-->
+
+<WorkloadConfigs>
+    <WLConfigResources>
+        <!-- Reference XML parameters/-->
+        <!--Workload Name="com.miHoYo.hkrpg" LE="600" /-->
+        <Workload Name="com.teslamotors.tesla" Target="alor_interposer,alor" Type="1" />
+        <Workload Name="io.wallpaperengine.weclient" Target="alor_interposer,alor" Type="1" />
+        <Workload Name="com.HoYoverse.hkrpgoversea" LE="13000" />
+        <Workload Name="com.tencent.docs" Type="1" />
+
+    </WLConfigResources>
+</WorkloadConfigs>

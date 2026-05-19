@@ -1,0 +1,4 @@
+
+service ifaaaidl /vendor/bin/hw/vendor.zte.fingerprint.ifaaaidl-service
+   class late_start
+   user system

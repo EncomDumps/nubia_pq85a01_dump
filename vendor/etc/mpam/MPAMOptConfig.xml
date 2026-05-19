@@ -1,0 +1,37 @@
+<!--
+/******************************************************************************
+  Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries.
+  All rights reserved.
+  Confidential and Proprietary - Qualcomm Technologies, Inc.
+******************************************************************************/
+-->
+<m_svc_config>
+    <node_paths>
+        <algo_enable>/sys/devices/platform/soc/soc:qcom,cache-allocation/enable_monitor</algo_enable>
+        <prefer_cpu_thresh>/sys/devices/platform/soc/soc:qcom,cache-allocation/prefer_cpu_thresh</prefer_cpu_thresh>
+        <prefer_gpu_thresh>/sys/devices/platform/soc/soc:qcom,cache-allocation/prefer_gpu_thresh</prefer_gpu_thresh>
+        <sample_time>/sys/devices/platform/soc/soc:qcom,cache-allocation/sampling_time_ms</sample_time>
+    </node_paths>
+    <values>
+        <sample_time_ms>10</sample_time_ms>
+        <enable_auto>0</enable_auto>
+    </values>
+    <pre_cpu_threshold>
+        <values>
+            <cluster0_boost_thresh>1600000</cluster0_boost_thresh>
+            <cluster0_boost_restore>1000000</cluster0_boost_restore>
+            <cluster1_boost_thresh>1500000</cluster1_boost_thresh>
+            <cluster1_boost_restore>1400000</cluster1_boost_restore>
+        </values>
+    </pre_cpu_threshold>
+    <pre_gpu_threshold>
+        <values>
+            <cluster0_low_freq>1286400</cluster0_low_freq>
+            <cluster0_high_freq>2227200</cluster0_high_freq>
+            <gpu_low_freq>443</gpu_low_freq>
+            <cluster1_low_freq>1689600</cluster1_low_freq>
+            <cluster1_high_freq>3072000</cluster1_high_freq>
+            <gpu_high_freq>443</gpu_high_freq>
+        </values>
+    </pre_gpu_threshold>
+</m_svc_config>

@@ -1,0 +1,9 @@
+on property:vendor.all.modules.ready=1
+    class_start brd_daemon
+
+service brd_normal /vendor/bin/battery_record_daemon normal
+    class brd_daemon
+    user system
+    group root system
+
+

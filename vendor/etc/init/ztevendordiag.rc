@@ -1,0 +1,50 @@
+service vendordiag /vendor/bin/vendordiag
+    class core
+    user root
+    group radio cache inet misc audio diag vendor_qti_diag bluetooth drmrpc mediadrm system nfc secure_element
+
+service zswsubsys_diag /vendor/bin/zte_diag_callback ${persist.odm.zswdiag.subsys}
+    user root
+    disabled
+    oneshot
+    group system root
+
+service zte_rf_diag /vendor/bin/zte_diag_rf_selftest_callback ${persist.odm.zswrfdiag.selftest}
+    class late_start core
+    user root
+    disabled
+    oneshot
+    group system radio audio log everybody root oem_2907
+
+service zte_rf_aging /vendor/bin/zte_diag_rf_aging_callback ${persist.odm.zswrfdiag.rfaging}
+    class late_start core
+    user root
+    disabled
+    oneshot
+    group system radio audio log everybody root oem_2907
+
+on property:persist.odm.zswdiag.subsys=* && property:persist.vendor.ssr.restart_level=ALL_ENABLE
+    start zswsubsys_diag
+# Started by AICoder, pid:b3745k4d5aa5b1814f550b51c01a20048702596d
+on property:persist.odm.zswrfdiag.selftest=true
+    start zte_rf_diag
+# Ended by AICoder, pid:b3745k4d5aa5b1814f550b51c01a20048702596d
+
+on property:persist.odm.zswrfdiag.rfaging=true
+    start zte_rf_aging
+
+on boot
+    chown system system /sys/module/soc_sleep_stats/parameters/sleep_zswscnoff_state
+    chmod 0644 /sys/module/soc_sleep_stats/parameters/sleep_zswscnoff_state
+    setprop persist.odm.zswdiag.subsys 99
+    setprop persist.odm.zswrfdiag.selftest false
+    setprop persist.odm.zswrfdiag.rfaging false
+
+
+on property:vendor.thermal.mode_cdsp=1
+    stop vendor.camera-provider
+    setprop vendor.thermal.mode_cdsp 0
+
+on property:vendor.thermal.mode_cdsp=0
+    start vendor.camera-provider
+

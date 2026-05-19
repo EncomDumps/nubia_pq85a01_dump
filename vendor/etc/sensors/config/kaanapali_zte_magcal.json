@@ -1,0 +1,24 @@
+{
+    "config": {
+    "hw_platform": ["MTP", "Surf", "RCM", "QRD", "HDK"],
+    "platform_family": ["160"]
+    },
+    "zte_magcal": {
+        "owner": "zte_magcal",
+        ".magcal": {
+            "owner": "zte_magcal",
+            ".offset": {
+                "owner": "zte_magcal",
+                "x": {
+                    "ver": "0","type": "flt","data": "0.0"
+                },
+                "y": {
+                    "ver": "0","type": "flt","data": "0.0"
+                },
+                "z": {
+                    "ver": "0","type": "flt","data": "0.0"
+                }
+            }
+        }
+    }
+}

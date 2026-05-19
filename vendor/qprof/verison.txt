@@ -1,0 +1,2 @@
+Qualcomm_Profiler_CLI: 2.25.5.20
+Qualcomm_Profiler_API: 2.25.5.20

@@ -1,0 +1,10 @@
+<!--
+    Input:
+        vendor/qcom/proprietary/camera-sfw/service/provider/aidl/vendor.qti.camera.transfer.xml
+-->
+<manifest version="9.0" type="device">
+    <hal format="aidl">
+        <name>vendor.zte.hardware.camera.transfer</name>
+        <fqname>ITransfer/vendor_zte/0</fqname>
+    </hal>
+</manifest>

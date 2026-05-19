@@ -1,0 +1,89 @@
+#nubia add for performance
+#
+#Performance optimization extension centralized modification for easy to maintain and porting, reduce conflict and redundancy.
+#SM8750 sun
+
+#on early-init
+#on init
+#on post-fs
+#on early-boot
+
+# load ifas.ko
+on late-fs && property:ro.vendor.feature.zte_feature_ifas=true
+    insmod /vendor/ifas.ko
+
+on boot
+    #nubia begin add for TGPA
+    mkdir /dev/cpuset/littlecluster
+    copy /dev/cpuset/cpus /dev/cpuset/littlecluster/cpus
+    copy /dev/cpuset/mems /dev/cpuset/littlecluster/mems
+    chown system system /dev/cpuset/littlecluster
+    chmod 0755 /dev/cpuset/littlecluster
+    chown system system /dev/cpuset/littlecluster/tasks
+    chmod 0664 /dev/cpuset/littlecluster/tasks
+
+    mkdir /dev/cpuset/bigcluster
+    copy /dev/cpuset/cpus /dev/cpuset/bigcluster/cpus
+    copy /dev/cpuset/mems /dev/cpuset/bigcluster/mems
+    chown system system /dev/cpuset/bigcluster
+    chmod 0755 /dev/cpuset/bigcluster
+    chown system system /dev/cpuset/bigcluster/tasks
+    chmod 0664 /dev/cpuset/bigcluster/tasks
+    #nubia add for TGPA end
+
+    mkdir /dev/cpuctl/littlecluster
+    chown system system /dev/cpuctl/littlecluster
+    chown system system /dev/cpuctl/littlecluster/tasks
+    chown system system /dev/cpuctl/littlecluster/cgroup.procs
+    chmod 0664 /dev/cpuctl/littlecluster/tasks
+    chmod 0664 /dev/cpuctl/littlecluster/cgroup.procs
+
+    mkdir /dev/cpuctl/bigcluster
+    chown system system /dev/cpuctl/bigcluster
+    chown system system /dev/cpuctl/bigcluster/tasks
+    chown system system /dev/cpuctl/bigcluster/cgroup.procs
+    chmod 0664 /dev/cpuctl/bigcluster/tasks
+    chmod 0664 /dev/cpuctl/bigcluster/cgroup.procs
+
+#on post-fs-data
+    #move to system core init.rc
+    #chown system system /sys/kernel/cpu_pressure/level
+    #chmod 444 /sys/kernel/cpu_pressure/level
+    #nubia add for sched
+
+    #chmod 0666 /sys/fork_monitor/debug
+    #chmod 0666 /sys/fork_monitor/opts
+    #chmod 0666 /sys/fork_monitor/enable
+    #chown system system /sys/fork_monitor/opts
+    #chown system system /sys/fork_monitor/debug
+    #chown system system /sys/fork_monitor/enable
+    #nubia add end
+
+#for input boost perf, use perflock on SM8850
+#on property:nubia.perf.cpu.input.boost.freq=0
+#    write /proc/sys/walt/input_boost/input_boost_freq "864000 0 0 0 0 0 0 0"
+#on property:nubia.perf.cpu.input.boost.freq=1
+#    write /proc/sys/walt/input_boost/input_boost_freq "1286400 0 0 0 0 0 0 0"
+#on property:nubia.perf.cpu.input.boost.freq=2
+#    write /proc/sys/walt/input_boost/input_boost_freq "1747200 0 0 0 0 0 0 0"
+#for mediatest
+#on property:nubia.perf.cpu.input.boost.freq=3
+#    write /proc/sys/walt/input_boost/input_boost_freq "0 0 0 0 0 0 0 0"
+#on property:nubia.perf.cpu.input.boost.ms=0
+#    write /proc/sys/walt/input_boost/input_boost_ms "100"
+#on property:nubia.perf.cpu.input.boost.ms=1
+#    write /proc/sys/walt/input_boost/input_boost_ms "200"
+#on property:nubia.perf.cpu.input.boost.ms=2
+#    write /proc/sys/walt/input_boost/input_boost_ms "50"
+#for mediatest
+#on property:nubia.perf.cpu.input.boost.ms=3
+#    write /proc/sys/walt/input_boost/input_boost_ms "50"
+
+#for cpufreq ctrl perf, not used on SM8850
+#on property:nubia.perf.cpu.cpufreq.ctrl=*
+#    write /sys/devices/system/cpu/cpu0/cpufreq/walt/cpufreq_ctrl ${nubia.perf.cpu.cpufreq.ctrl}
+
+#add for touping
+on property:sys.nubia.tp.wfdconfig=*
+    setprop persist.vendor.debug.wfd.config ${sys.nubia.tp.wfdconfig}
+

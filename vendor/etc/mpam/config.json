@@ -1,0 +1,59 @@
+{
+  "usecases": [
+    {
+      "usecaseName": "CPUHeavy",
+      "MPAM":
+      {
+          "NoC_BW":
+            {
+              "cpu_cluster0": 2,
+              "cpu_cluster1": 4,
+              "gpu": 1,
+              "nsp": 1
+            },
+          "SLC":
+            {
+              "apps_partid0": 0,
+              "apps_partid1": 0,
+              "apps_partid2": 2,
+              "gpu": 0,
+              "nsp": 0
+            }
+      }
+    },
+    {
+      "usecaseName": "GPUHeavy",
+      "MPAM":
+      {
+          "NoC_BW":
+            {
+              "cpu_cluster0": 2,
+              "cpu_cluster1": 1,
+              "gpu": 4,
+              "nsp": 1
+            },
+          "SLC":
+            {
+              "apps_partid0": 2,
+              "apps_partid1": 2,
+              "apps_partid2": 2,
+              "gpu": 0,
+              "nsp": 0
+            }
+        }
+    }
+  ], 
+  "topApps": [
+      {
+          "packageName": "com.miHoYo.GenshinImpact",
+          "usecaseName": "CPUHeavy"
+      },
+      {
+          "packageName": "com.HoYoverse.hkrpgoversea",
+          "usecaseName": "GPUHeavy"
+      },
+      {
+          "packageName": "com.miHoYo.Yuanshen"
+      }
+  ]
+}

@@ -1,0 +1,10 @@
+service nfc_hal_service /vendor/bin/hw/android.hardware.nfc-service-aidl
+    class hal
+    user nfc
+    group nfc
+    # AIDL interfaces
+    interface aidl android.hardware.nfc.INfc/default
+    # don't auto restart
+    oneshot
+    # start only when requested
+    # disabled

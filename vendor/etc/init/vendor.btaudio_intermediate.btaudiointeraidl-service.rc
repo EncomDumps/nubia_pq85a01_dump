@@ -1,0 +1,6 @@
+service btaudiointermediate-service /vendor/bin/hw/vendor.btaudio_intermediate.btaudiointeraidl-service
+    interface aidl vendor.btaudio_intermediate.btaudiointeraidl.IVendorBtAudioInter/default
+    class hal
+    user system
+    group system
+    shutdown critical

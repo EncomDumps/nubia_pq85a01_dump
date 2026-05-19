@@ -1,0 +1,10 @@
+<!--
+    Input:
+        vendor/zte/audio_ext/btaudio_intermediate/default/vendor.btaudio_intermediate.btaudiointeraidl-service.xml
+-->
+<manifest version="9.0" type="device">
+    <hal format="aidl">
+        <name>vendor.btaudio_intermediate.btaudiointeraidl</name>
+        <fqname>IVendorBtAudioInter/default</fqname>
+    </hal>
+</manifest>

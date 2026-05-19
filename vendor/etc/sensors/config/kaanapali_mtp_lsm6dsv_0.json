@@ -1,0 +1,30 @@
+{
+  "config": {
+    "hw_platform": ["MTP", "Surf", "RCM", "QRD", "HDK"],
+    "platform_family": ["160"]
+  },
+  "lsm6dsv_0_platform":{
+    "owner": "lsm6dsv",
+    ".config":{
+      "owner": "lsm6dsv",
+      "manufacturer_id":{ "type": "int", "ver": "0",
+      "data": "0x0208"
+      },
+      "provisional_id":{ "type": "int", "ver": "0",
+      "data": "0x0070120B"
+      }
+    },
+    ".orient":{
+      "owner": "lsm6dsv",
+      "x":{ "type": "str", "ver": "1",
+        "data": "+y"
+      },
+      "y":{ "type": "str", "ver": "1",
+        "data": "-x"
+      },
+      "z":{ "type": "str", "ver": "0",
+        "data": "+z"
+      }
+    }
+  }
+}

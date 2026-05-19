@@ -1,0 +1,10 @@
+<!--
+    Input:
+        vendor/zte/vendor_aimodelservice/bge/vendor.zte.bge-service.xml
+-->
+<manifest version="9.0" type="device">
+    <hal format="aidl">
+        <name>vendor.zte.aimodel</name>
+        <fqname>IBgeModel/default</fqname>
+    </hal>
+</manifest>

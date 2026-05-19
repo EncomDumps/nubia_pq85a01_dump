@@ -1,0 +1,635 @@
+{
+  "config": {
+    "hw_platform": ["MTP", "Surf", "RCM", "QRD", "HDK"],
+    "platform_family": ["160"]
+    },
+    "stk50153_0": {
+        "owner": "sns_stk50153",
+        ".sar": {
+            "owner": "sns_stk50153",
+            ".config": {
+                "owner": "sns_stk50153",
+                "is_dri": {
+                    "type": "int",
+                    "ver": "0",
+                    "data": "1"
+                },
+                "hw_id": {
+                    "type": "int",
+                    "ver": "0",
+                    "data": "1"
+                },
+                "res_idx": {
+                    "type": "int",
+                    "ver": "0",
+                    "data": "0"
+                },
+                "sync_stream": {
+                    "type": "int",
+                    "ver": "0",
+                    "data": "0"
+                }
+            }
+        }
+    },
+    "stk50153_0_platform": {
+        "owner": "sns_stk50153",
+        ".config": {
+            "owner": "sns_stk50153",
+            "bus_type": {
+                "type": "int",
+                "ver": "0",
+                "data": "0"
+            },
+            "bus_instance": {
+                "type": "int",
+                "ver": "0",
+                "data": "2"
+            },
+            "slave_config": {
+                "type": "int",
+                "ver": "0",
+                "data": "44"
+            },
+            "min_bus_speed_khz": {
+                "type": "int",
+                "ver": "0",
+                "data": "400"
+            },
+            "max_bus_speed_khz": {
+                "type": "int",
+                "ver": "0",
+                "data": "400"
+            },
+            "reg_addr_type": {
+                "type": "int",
+                "ver": "0",
+                "data": "1"
+            },
+            "dri_irq_num": {
+                "type": "int",
+                "ver": "0",
+                "data": "77"
+            },
+            "irq_pull_type": {
+                "type": "int",
+                "ver": "0",
+                "data": "2"
+            },
+            "irq_is_chip_pin": {
+                "type": "int",
+                "ver": "0",
+                "data": "1"
+            },
+            "irq_drive_strength": {
+                "type": "int",
+                "ver": "0",
+                "data": "0"
+            },
+            "irq_trigger_type": {
+                "type": "int",
+                "ver": "0",
+                "data": "1"
+            },
+            "num_rail": {
+                "type": "int",
+                "ver": "0",
+                "data": "2"
+            },
+            "rail_on_state": {
+                "type": "int",
+                "ver": "0",
+                "data": "1"
+            },
+            "vdd_rail": {
+                "type": "str",
+                "ver": "1",
+                "data": "L1B_E0"
+            },
+            "vddio_rail": {
+                "type": "str",
+                "ver": "1",
+                "data": "L1B_E0"
+            },
+            "rigid_body_type": {
+                "type": "int",
+                "ver": "0",
+                "data": "0"
+            }
+        },
+        ".sar": {
+            "owner": "sns_stk50153",
+            ".fac_cal": {
+                "owner": "sns_stk50153",
+                "dist_0_thd0": {
+                    "type": "int",
+                    "ver": "0",
+                    "data": "330000"
+                },
+                "dist_0_thd1": {
+                    "type": "int",
+                    "ver": "0",
+                    "data": "60000"
+                },
+                "dist_0_thd2": {
+                    "type": "int",
+                    "ver": "0",
+                    "data": "4500"
+                },
+                "dist_0_thd3": {
+                    "type": "int",
+                    "ver": "0",
+                    "data": "4500"
+                },
+                "dist_0_thd4": {
+                    "type": "int",
+                    "ver": "0",
+                    "data": "4500"
+                },
+                "dist_0_thd5": {
+                    "type": "int",
+                    "ver": "0",
+                    "data": "4500"
+                },
+                "dist_0_thd6": {
+                    "type": "int",
+                    "ver": "0",
+                    "data": "4500"
+                },
+                "dist_0_thd7": {
+                    "type": "int",
+                    "ver": "0",
+                    "data": "4500"
+                },
+                "dist_1_thd0": {
+                    "type": "int",
+                    "ver": "0",
+                    "data": "9000"
+                },
+                "dist_1_thd1": {
+                    "type": "int",
+                    "ver": "0",
+                    "data": "900000"
+                },
+                "dist_1_thd2": {
+                    "type": "int",
+                    "ver": "0",
+                    "data": "9000"
+                },
+                "dist_1_thd3": {
+                    "type": "int",
+                    "ver": "0",
+                    "data": "9000"
+                },
+                "dist_1_thd4": {
+                    "type": "int",
+                    "ver": "0",
+                    "data": "9000"
+                },
+                "dist_1_thd5": {
+                    "type": "int",
+                    "ver": "0",
+                    "data": "9000"
+                },
+                "dist_1_thd6": {
+                    "type": "int",
+                    "ver": "0",
+                    "data": "9000"
+                },
+                "dist_1_thd7": {
+                    "type": "int",
+                    "ver": "0",
+                    "data": "9000"
+                }
+            },
+            ".features_config": {
+                "owner": "sns_stk50153",
+                "en_fix_cadc": {
+                    "type": "int",
+                    "ver": "0",
+                    "data": "1"
+                },
+                "en_conv_done": {
+                    "type": "int",
+                    "ver": "0",
+                    "data": "0"
+                },
+                "en_pause_mode": {
+                    "type": "int",
+                    "ver": "0",
+                    "data": "1"
+                },
+                "en_temp_compensation": {
+                    "type": "int",
+                    "ver": "0",
+                    "data": "0"
+                },
+                "major_phase": {
+                    "type": "int",
+                    "ver": "0",
+                    "data": "2"
+                },
+                "ref_phase": {
+                    "type": "int",
+                    "ver": "0",
+                    "data": "1"
+                },
+                "stk_dist_1_en": {
+                    "type": "int",
+                    "ver": "0",
+                    "data": "0"
+                }
+            },
+            ".rxio_mapping": {
+                "owner": "sns_stk50153",
+                "rxio_0_phase": {
+                    "type": "int",
+                    "ver": "0",
+                    "data": "0"
+                },
+                "rxio_0_usage": {
+                    "type": "int",
+                    "ver": "0",
+                    "data": "2"
+                },
+                "rxio_1_phase": {
+                    "type": "int",
+                    "ver": "0",
+                    "data": "0"
+                },
+                "rxio_1_usage": {
+                    "type": "int",
+                    "ver": "0",
+                    "data": "4"
+                },
+                "rxio_2_phase": {
+                    "type": "int",
+                    "ver": "0",
+                    "data": "0"
+                },
+                "rxio_2_usage": {
+                    "type": "int",
+                    "ver": "0",
+                    "data": "2"
+                },
+                "rxio_3_phase": {
+                    "type": "int",
+                    "ver": "0",
+                    "data": "0"
+                },
+                "rxio_3_usage": {
+                    "type": "int",
+                    "ver": "0",
+                    "data": "2"
+                },
+                "rxio_4_phase": {
+                    "type": "int",
+                    "ver": "0",
+                    "data": "0"
+                },
+                "rxio_4_usage": {
+                    "type": "int",
+                    "ver": "0",
+                    "data": "2"
+                },
+                "rxio_5_phase": {
+                    "type": "int",
+                    "ver": "0",
+                    "data": "0"
+                },
+                "rxio_5_usage": {
+                    "type": "int",
+                    "ver": "0",
+                    "data": "2"
+                },
+                "rxio_6_phase": {
+                    "type": "int",
+                    "ver": "0",
+                    "data": "1"
+                },
+                "rxio_6_usage": {
+                    "type": "int",
+                    "ver": "0",
+                    "data": "4"
+                },
+                "rxio_7_phase": {
+                    "type": "int",
+                    "ver": "0",
+                    "data": "0"
+                },
+                "rxio_7_usage": {
+                    "type": "int",
+                    "ver": "0",
+                    "data": "2"
+                }
+            },
+            ".reg_config": {
+                "owner": "sns_stk50153",
+                "STK_ADDR_CORR_ENGA_0_0X0430": {
+                    "type": "int",
+                    "ver": "0",
+                    "data": "0x0"
+                },
+                "STK_ADDR_CORR_ENGB_0_0X0438": {
+                    "type": "int",
+                    "ver": "0",
+                    "data": "0x0"
+                },
+                "STK_ADDR_CORR_ENGC_0_0X0440": {
+                    "type": "int",
+                    "ver": "0",
+                    "data": "0x0"
+                },
+                "STK_ADDR_CORR_ENGD_0_0X0448": {
+                    "type": "int",
+                    "ver": "0",
+                    "data": "0x0"
+                },
+                "STK_ADDR_CORRECTION_PH0_0X0214": {
+                    "type": "int",
+                    "ver": "0",
+                    "data": "0x08008000"
+                },
+                "STK_ADDR_CORRECTION_PH1_0X0254": {
+                    "type": "int",
+                    "ver": "0",
+                    "data": "0x08008000"
+                },
+                "STK_ADDR_CORRECTION_PH2_0X0294": {
+                    "type": "int",
+                    "ver": "0",
+                    "data": "0x08008000"
+                },
+                "STK_ADDR_CORRECTION_PH3_0X02D4": {
+                    "type": "int",
+                    "ver": "0",
+                    "data": "0x08008000"
+                },
+                "STK_ADDR_CORRECTION_PH4_0X0314": {
+                    "type": "int",
+                    "ver": "0",
+                    "data": "0x08008000"
+                },
+                "STK_ADDR_CORRECTION_PH5_0X0354": {
+                    "type": "int",
+                    "ver": "0",
+                    "data": "0x08008000"
+                },
+                "STK_ADDR_CORRECTION_PH6_0X0394": {
+                    "type": "int",
+                    "ver": "0",
+                    "data": "0x08008000"
+                },
+                "STK_ADDR_CORRECTION_PH7_0X03D4": {
+                    "type": "int",
+                    "ver": "0",
+                    "data": "0x08008000"
+                },
+                "STK_ADDR_SCAN_PERIOD": {
+                    "type": "int",
+                    "ver": "0",
+                    "data": "0x000007D0"
+                }
+            },
+            ".reg_config_bank2": {
+                "owner": "sns_stk50153",
+                "STK_ADDR_TX_CTRL_PH0": {
+                    "type": "int",
+                    "ver": "0",
+                    "data": "0x07000606"
+                },
+                "STK_ADDR_TX_CTRL_PH1": {
+                    "type": "int",
+                    "ver": "0",
+                    "data": "0x07000C0C"
+                },
+                "STK_ADDR_TX_CTRL_PH2": {
+                    "type": "int",
+                    "ver": "0",
+                    "data": "0x06000B0B"
+                },
+                "STK_ADDR_TX_CTRL_PH3": {
+                    "type": "int",
+                    "ver": "0",
+                    "data": "0x06000B0B"
+                },
+                "STK_ADDR_TX_CTRL_PH4": {
+                    "type": "int",
+                    "ver": "0",
+                    "data": "0x06000B0B"
+                },
+                "STK_ADDR_TX_CTRL_PH5": {
+                    "type": "int",
+                    "ver": "0",
+                    "data": "0x06000B0B"
+                },
+                "STK_ADDR_TX_CTRL_PH6": {
+                    "type": "int",
+                    "ver": "0",
+                    "data": "0x06000B0B"
+                },
+                "STK_ADDR_TX_CTRL_PH7": {
+                    "type": "int",
+                    "ver": "0",
+                    "data": "0x06000B0B"
+                },
+                "STK_ADDR_SENS_CTRL_PH0": {
+                    "type": "int",
+                    "ver": "0",
+                    "data": "0x00004003"
+                },
+                "STK_ADDR_SENS_CTRL_PH1": {
+                    "type": "int",
+                    "ver": "0",
+                    "data": "0x10004003"
+                },
+                "STK_ADDR_SENS_CTRL_PH2": {
+                    "type": "int",
+                    "ver": "0",
+                    "data": "0x00004003"
+                },
+                "STK_ADDR_SENS_CTRL_PH3": {
+                    "type": "int",
+                    "ver": "0",
+                    "data": "0x00004003"
+                },
+                "STK_ADDR_SENS_CTRL_PH4": {
+                    "type": "int",
+                    "ver": "0",
+                    "data": "0x00004003"
+                },
+                "STK_ADDR_SENS_CTRL_PH5": {
+                    "type": "int",
+                    "ver": "0",
+                    "data": "0x00004003"
+                },
+                "STK_ADDR_SENS_CTRL_PH6": {
+                    "type": "int",
+                    "ver": "0",
+                    "data": "0x00004003"
+                },
+                "STK_ADDR_SENS_CTRL_PH7": {
+                    "type": "int",
+                    "ver": "0",
+                    "data": "0x00004003"
+                }
+            },
+            ".reg_config_bank3": {
+                "owner": "sns_stk50153", 
+                "STK_ADDR_FILT_CFG_PH0": {
+                    "type": "int",
+                    "ver": "0",
+                    "data": "0x00000111"
+                },
+                "STK_ADDR_FILT_CFG_PH1": {
+                    "type": "int",
+                    "ver": "0",
+                    "data": "0x00000111"
+                },
+                "STK_ADDR_FILT_CFG_PH2": {
+                    "type": "int",
+                    "ver": "0",
+                    "data": "0x00000111"
+                },
+                "STK_ADDR_FILT_CFG_PH3": {
+                    "type": "int",
+                    "ver": "0",
+                    "data": "0x00000111"
+                },
+                "STK_ADDR_FILT_CFG_PH4": {
+                    "type": "int",
+                    "ver": "0",
+                    "data": "0x00000111"
+                },
+                "STK_ADDR_FILT_CFG_PH5": {
+                    "type": "int",
+                    "ver": "0",
+                    "data": "0x00000111"
+                },
+                "STK_ADDR_FILT_CFG_PH6": {
+                    "type": "int",
+                    "ver": "0",
+                    "data": "0x00000111"
+                },
+                "STK_ADDR_FILT_CFG_PH7": {
+                    "type": "int",
+                    "ver": "0",
+                    "data": "0x00000111"
+                },
+                "STK_ADDR_REG_TCON_LIGHT_LOAD_0": {
+                    "type": "int",
+                    "ver": "0",
+                    "data": "0x0505000F"
+                },
+                "STK_ADDR_REG_TCON_LIGHT_LOAD_1": {
+                    "type": "int",
+                    "ver": "0",
+                    "data": "0x00000505"
+                },
+                "STK_ADDR_REG_TCON_MEDIUM_LOAD_0": {
+                    "type": "int",
+                    "ver": "0",
+                    "data": "0x0E0E001D"
+                },
+                "STK_ADDR_REG_TCON_MEDIUM_LOAD_1": {
+                    "type": "int",
+                    "ver": "0",
+                    "data": "0x00000E0E"
+                },
+                "STK_ADDR_REG_TCON_HEAVY_LOAD_0": {
+                    "type": "int",
+                    "ver": "0",
+                    "data": "0x1D1D002F"
+                },
+                "STK_ADDR_REG_TCON_HEAVY_LOAD_1": {
+                    "type": "int",
+                    "ver": "0",
+                    "data": "0x10001D1D"
+                }
+            },
+            ".reg_config_bank4": {
+                "owner": "sns_stk50153",
+                "STK_ADDR_CUSTOM_A_CTRL0": {
+                    "type": "int",
+                    "ver": "0",
+                    "data": "0x0"
+                },
+                "STK_ADDR_CUSTOM_A_CTRL1": {
+                    "type": "int",
+                    "ver": "0",
+                    "data": "0x00038000"
+                },
+                "STK_ADDR_CUSTOM_B_CTRL0": {
+                    "type": "int",
+                    "ver": "0",
+                    "data": "0x0"
+                },
+                "STK_ADDR_CUSTOM_B_CTRL1": {
+                    "type": "int",
+                    "ver": "0",
+                    "data": "0x00038000"
+                },
+                "STK_ADDR_CUSTOM_C_CTRL0": {
+                    "type": "int",
+                    "ver": "0",
+                    "data": "0x0"
+                },
+                "STK_ADDR_CUSTOM_C_CTRL1": {
+                    "type": "int",
+                    "ver": "0",
+                    "data": "0x00038000"
+                },
+                "STK_ADDR_CUSTOM_D_CTRL0": {
+                    "type": "int",
+                    "ver": "0",
+                    "data": "0x0"
+                },
+                "STK_ADDR_CUSTOM_D_CTRL1": {
+                    "type": "int",
+                    "ver": "0",
+                    "data": "0x00038000"
+                },
+                "STK_ADDR_SCAN_OPT_PH0": {
+                    "type": "int",
+                    "ver": "0",
+                    "data": "0x0"
+                },
+                "STK_ADDR_SCAN_OPT_PH1": {
+                    "type": "int",
+                    "ver": "0",
+                    "data": "0x0"
+                },
+                "STK_ADDR_SCAN_OPT_PH2": {
+                    "type": "int",
+                    "ver": "0",
+                    "data": "0x0"
+                },
+                "STK_ADDR_SCAN_OPT_PH3": {
+                    "type": "int",
+                    "ver": "0",
+                    "data": "0x0"
+                },
+                "STK_ADDR_SCAN_OPT_PH4": {
+                    "type": "int",
+                    "ver": "0",
+                    "data": "0x0"
+                },
+                "STK_ADDR_SCAN_OPT_PH5": {
+                    "type": "int",
+                    "ver": "0",
+                    "data": "0x0"
+                },
+                "STK_ADDR_SCAN_OPT_PH6": {
+                    "type": "int",
+                    "ver": "0",
+                    "data": "0x0"
+                },
+                "STK_ADDR_SCAN_OPT_PH7": {
+                    "type": "int",
+                    "ver": "0",
+                    "data": "0x0"
+                }
+            }
+        }
+    }
+}

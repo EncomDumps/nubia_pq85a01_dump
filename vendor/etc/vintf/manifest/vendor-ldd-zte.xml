@@ -1,0 +1,11 @@
+<!--
+    Input:
+        vendor/zte/charger/zte_ldd_cmd/interfaces/default/vendor-ldd-zte.xml
+-->
+<manifest version="9.0" type="device">
+    <hal format="aidl">
+        <name>vendor.zte.ldd.cmd</name>
+        <version>2</version>
+        <fqname>IZteLddCmd/default</fqname>
+    </hal>
+</manifest>

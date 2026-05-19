@@ -1,0 +1,18 @@
+<?xml version="1.0" standalone="no"?>
+<mfnr_network_denoise_config>
+    <PhoneConfigParam VNSPrePostCachePath="/vendor/etc/camera/" phone_id="NX721J"
+        black_level_net="64" white_level_net="1023" model_width="1024" model_height="576">
+        <CameraConfigParam camera_id="0" factor_rough="8" active_lux="400" net_ratio="0.9" k1_camera="0.00031653445151238167f"
+            k2_camera="0.011756006795597518f" s1_camera="2.236671749736769e-07" s2_camera="-0.0001160521497894154" s3_camera="0.8107532717304519"
+            black_level_camera="64" white_level_camera="1023" max_analog_iso="6400" num_w="1"
+            num_h="1" threshold_dpc_luma_percent="0.005f"></CameraConfigParam>
+        <CameraConfigParam camera_id="1" factor_rough="8" active_lux="400" net_ratio="0.9" k1_camera="0.0007850659845979654f" k2_camera="0.4431214417888345f"
+            s1_camera="2.5673230815743236e-06f" s2_camera="0.001617579461851353f" s3_camera="-0.15181181563324356f"
+            black_level_camera="64" white_level_camera="1023" max_analog_iso="1550" num_w="1"
+            num_h="1" threshold_dpc_luma_percent="0.005f"></CameraConfigParam>
+        <CameraConfigParam camera_id="2" factor_rough="8" active_lux="400" net_ratio="0.9" k1_camera="0.00041131745784293416f" k2_camera="0.01976714816328662f"  
+            s1_camera="1.8169557222842072e-07f" s2_camera="0.0013489479699888426f" s3_camera="0.47654258311309466f"
+            black_level_camera="64" white_level_camera="1023" max_analog_iso="1550" num_w="1"
+            num_h="1" threshold_dpc_luma_percent="0.02f"></CameraConfigParam>
+    </PhoneConfigParam>
+</mfnr_network_denoise_config>

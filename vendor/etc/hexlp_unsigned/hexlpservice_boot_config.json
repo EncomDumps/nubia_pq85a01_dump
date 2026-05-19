@@ -1,0 +1,43 @@
+/**
+ * @file hexlpservice_boot_config.json
+ *
+ * @cr
+ * Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries.
+ * All rights reserved.
+ * Confidential and Proprietary - Qualcomm Technologies, Inc.
+ *
+ * @brief
+ * This file contains the boot configuration for the unsigned Hexlp service.
+ *
+ */
+
+{
+    "service_infos":
+    {
+        "infos":
+        {
+        },
+        "usecase_infos":
+        {
+            "qti.generic_qnn":
+            {
+                "extension_info":
+                {
+                    "library_name": "libnspextensiongenericqnnservice.so",
+                    "usecase_identifier": "generic_qnn"
+                },
+                "input_capabilities":
+                {
+                },
+                "output_capabilities":
+                {
+                },
+                "other_capabilities":
+                {
+                    "vulkan.qnn_version": "qaisw-v2.36.0.250627101419_123260"
+                }
+            }
+        }
+    }
+}
+

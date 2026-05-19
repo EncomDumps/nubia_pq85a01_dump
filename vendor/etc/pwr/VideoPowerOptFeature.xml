@@ -1,0 +1,81 @@
+<!--
+/******************************************************************************
+  @file    VideoOptimizationFeature.xml
+  @brief   Video Optimization feature xml
+
+  DESCRIPTION
+      Each feature has an xml file to define the feature components
+
+  ===========================================================================
+  Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries.
+  All rights reserved.
+  Confidential and Proprietary - Qualcomm Technologies, Inc.
+  ===========================================================================
+******************************************************************************/
+-->
+<Feature>
+   <Name>VideoPowerOptFeature</Name>
+   <Libname>libvideooptfeature.so</Libname>
+   <Configs>
+        <VIDEO_OPT>1</VIDEO_OPT>
+        <VIDEO_DYN>1</VIDEO_DYN>
+        <ENABLE_BROWSER>1</ENABLE_BROWSER>
+        <MAX_CONTENT_FPS>30</MAX_CONTENT_FPS>
+        <MAX_HW_CONTENT_FPS>144</MAX_HW_CONTENT_FPS>
+        <MAX_PANEL_FPS>144</MAX_PANEL_FPS>
+        <MAX_SAMPLE_NUM>6</MAX_SAMPLE_NUM>
+        <MAX_WAIT_TIME>1</MAX_WAIT_TIME>
+        <DYN_FPS_CONTROL_BROWSER>15</DYN_FPS_CONTROL_BROWSER>
+        <DYN_FPS_CONTROL_VIDEO>45</DYN_FPS_CONTROL_VIDEO>
+    </Configs>
+    <Profiles>
+
+      <Profile>
+            <!-- Disable Colocation  -->
+            <DEFAULT>0x40CF4000, 0x270F2706</DEFAULT>
+            <!-- SCHED_WINDOW_TICKS_UPDATE resource opcode, value -->
+            <!-- MPCTLV3_WALT_HISPEED_COND_FREQ_BIG, value -->
+            <!-- MPCTLV3_ZONE_MAX_UTIL_PCT, value -->
+            <!-- MPCTLV3_SCHED_WALT_FEATURES, value -->
+            <!-- MPCTLV3_SCHEDUTIL_RTG_BOOST_FREQ_CLUSTER_BIG, value -->
+            <!-- MPCTLV3_SCHEDUTIL_PREDICTIVE_LOAD_CLUSTER_BIG, value -->
+            <!-- MPCTLV3_SCALING_MIN_FREQ_BIG , value -->
+            <!-- MPCTLV3_MIN_ONLINE_CPU_CLUSTER_BIG, value -->
+            <!-- MPCTLV3_CORE_CTL_CPU_NOT_PREFERRED_BIG, value -->
+            <!-- MPCTLV3_CORE_CTL_OFFLINE_DELAY_MS_BIG, value -->
+            <!-- MPCTLV3_GOLD_CPU_LLCC_BW_AB_SCALE, value -->
+            <!-- MPCTLV3_CPU_LLCC_BW_AB_SCALE, value -->
+            <!-- MPCTLV3_LLCC_DDR_BW_AB_SCALE, value -->
+            <!-- MPCTLV3_SCHED_IPC_LEVELS_BIG, value-->
+            <DYN_PROFILE0>0x40818000, 998400, 0x41444000, 0</DYN_PROFILE0>
+            <DYN_PROFILE1>0x40CA4000, 0x4, 0x40818000, 998400, 0x4144C000, 0, 0x41444000, 0, 0x40810000, 384, 0x41000000, 3, 0x4100c000, 7, 0x41014000, 0</DYN_PROFILE1>
+            <DYN_PROFILE2>0x40CA4000, 0x8, 0x40818000, 998400, 0x6081C000, 4, 1113600, 95, 1555200, 90, 0x43C88000, 2, 0x4144C000, 0, 0x41444000, 0, 0x40810000, 384, 0x41000000, 3, 0x4100c000, 7, 0x41014000, 0,
+            0x41874000, 60, 0x41878000, 60, 0x43048000, 60, 0x63C50000, 5, 1700000, 1700000, 1996800, 1996800, 2147483647</DYN_PROFILE2>
+            <DYN_PROFILE3>0x40CA4000, 0x8, 0x40818000, 998400, 0x6081C000, 4, 1113600, 95, 1555200, 90, 0x43C88000, 2, 0x4144C000, 0, 0x41444000, 0, 0x40810000, 384, 0x41000000, 3, 0x4100c000, 7, 0x41014000, 0,
+            0x41874000, 60, 0x41878000, 60, 0x43048000, 60, 0x63C50000, 5, 1700000, 1700000, 1996800, 1996800, 2147483647</DYN_PROFILE3>
+            <DYN_PROFILE4>0x40CA4000, 0x8, 0x40818000, 998400, 0x6081C000, 4, 1113600, 95, 1555200, 90, 0x43C88000, 2, 0x4144C000, 0, 0x41444000, 0, 0x40810000, 384, 0x41000000, 2, 0x4100c000, 0xf, 0x41014000, 0,
+            0x41874000, 60, 0x41878000, 60, 0x43048000, 60, 0x63C50000, 5, 1700000, 1700000, 1996800, 1996800, 2147483647</DYN_PROFILE4>
+            <CAMERA_PROFILE1>0x40CA4000, 0x8, 0x40818000, 998400, 0x6081C000, 4, 1113600, 95, 1555200, 90, 0x43C88000, 2, 0x4144C000, 0, 0x41444000, 0, 0x41000000, 3, 0x4100c000, 7, 0x41014000, 0,
+            0x41874000, 60, 0x41878000, 60, 0x43048000, 60, 0x63C50000, 5, 1700000, 1700000, 1996800, 1996800, 2147483647</CAMERA_PROFILE1>
+            <CAMERA_PROFILE2>0x40CA4000, 0x8, 0x40818000, 998400, 0x6081C000, 4, 1113600, 95, 1555200, 90, 0x43C88000, 2, 0x4144C000, 0, 0x41444000, 0, 0x41000000, 3, 0x4100c000, 7, 0x41014000, 0,
+            0x41874000, 60, 0x41878000, 60, 0x43048000, 60, 0x63C50000, 5, 1700000, 1700000, 1996800, 1996800, 2147483647</CAMERA_PROFILE2>
+            <CAMERA_PROFILE3>0x40CA4000, 0x8, 0x40818000, 998400, 0x6081C000, 4, 1113600, 95, 1555200, 90, 0x43C88000, 2, 0x4144C000, 0, 0x41444000, 0, 0x41000000, 3, 0x4100c000, 7, 0x41014000, 0,
+            0x41874000, 60, 0x41878000, 60, 0x43048000, 60, 0x63C50000, 5, 1700000, 1700000, 1996800, 1996800, 2147483647</CAMERA_PROFILE3>
+      </Profile>
+    </Profiles>
+    <IgnoredApps>
+        <App>com.google.android.gms</App>
+        <App>com.android.vending</App>
+        <App>com.google.android.projection.gearhead</App>
+    </IgnoredApps>
+    <AppliedApps>
+        <App>com.android.gallery3d</App>
+        <App>com.tencent.mm</App>
+    </AppliedApps>
+    <IgnoredActivity>
+        <App>com.miui.home</App>
+    </IgnoredActivity>
+    <Trigger>
+        <AsyncId>0x00001001, 0x00001002, 0x00001003, 0x00001004, 0x00001080, 0x00001040, 0x00001095, 0x00001088, 0X00001502, 0X00001503, 0X00001504, 0X00001506, 0X00001330, 0X00001338</AsyncId>
+    </Trigger>
+</Feature>

@@ -1,0 +1,11 @@
+<!--
+    Input:
+        vendor/zte/nooks/nook-modem/cpp/nook-modem-daemon/etc/vendor.zte.nook.modem-manifest-ds.xml
+-->
+<manifest version="9.0" type="device">
+    <hal format="aidl">
+        <name>vendor.zte.nook.modem</name>
+        <fqname>IModem/instance0</fqname>
+        <fqname>IModem/instance1</fqname>
+    </hal>
+</manifest>

@@ -1,0 +1,15 @@
+on property:vendor.all.modules.ready=1
+    chmod 0775 /mnt/vendor/persist/zstats
+    chown system system /mnt/vendor/persist/zstats/light_longchg.dat
+    chmod 0664 /mnt/vendor/persist/zstats/light_longchg.dat
+    chown system system /sys/class/power_supply/interface/charge_control_limit
+    chmod 0664 /sys/class/power_supply/interface/charge_control_limit
+#   class_start light_longchg
+
+#service light_longchg /vendor/bin/light_longchg
+#    class light_longchg
+#    user system
+#    group system root
+
+on post-fs-data
+    mkdir /data/vendor/charger 0770 system system

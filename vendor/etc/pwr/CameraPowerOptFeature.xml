@@ -1,0 +1,69 @@
+<!--
+/******************************************************************************
+  @file    CameraPowerOptFeature.xml
+  @brief   Camera Optimization feature xml
+
+  DESCRIPTION
+      Each feature has a xml file to define the feature components
+
+  ===========================================================================
+  Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries.
+  All rights reserved.
+  Confidential and Proprietary - Qualcomm Technologies, Inc.
+  ===========================================================================
+******************************************************************************/
+-->
+<Feature>
+   <Name>CameraPowerOptFeature</Name>
+   <Libname>libcamerapoweroptfeature.so</Libname>
+   <Configs>
+        <SAMPLE_CALL_INTERVAL_MSEC>500</SAMPLE_CALL_INTERVAL_MSEC>
+        <FPS_STABLE_COUNT>12</FPS_STABLE_COUNT>
+        <!-- FPS_STABLE_THRESHOLD_percentage -->
+        <FPS_STABLE_THRESHOLD>10</FPS_STABLE_THRESHOLD>
+        <LEARNING_MAX_RETRY_COUNT>5</LEARNING_MAX_RETRY_COUNT>
+        <POST_DESICION_RETRY_COUNT>3</POST_DESICION_RETRY_COUNT>
+        <UTIL_LEVEL0>123</UTIL_LEVEL0>
+        <UTIL_LEVEL1>190</UTIL_LEVEL1>
+        <UTIL_LEVEL2>254</UTIL_LEVEL2>
+        <UTIL_LEVEL3>323</UTIL_LEVEL3>
+        <UTIL_LEVEL4>394</UTIL_LEVEL4>
+        <CUSTOM_HINT_ID>0x00001331,30,0x00001335,30</CUSTOM_HINT_ID>
+   </Configs>
+   <Profiles>
+        <Profile>
+            <!-- MPCTLV3_SCHEDUTIL_HISPEED_FREQ_CLUSTER_BIG -->
+            <!-- MPCTLV3_SCHEDUTIL_PREDICTIVE_LOAD_CLUSTER_BIG -->
+            <!-- MPCTLV3_SCALING_MIN_FREQ_BIG , value -->
+            <DYN_PROFILE0>0x4143C000, 691, 0x41444000, 0, 0x40810000,384</DYN_PROFILE0>
+            <DYN_PROFILE1>0x4143C000, 691, 0x41444000, 0, 0x40810000,384</DYN_PROFILE1>
+            <DYN_PROFILE2>0x4143C000, 691, 0x41444000, 0, 0x40810000,384</DYN_PROFILE2>
+            <DYN_PROFILE3>0x4143C000, 691, 0x41444000, 0, 0x40810000,384</DYN_PROFILE3>
+            <DYN_PROFILE4>0x4143C000, 691, 0x41444000, 0, 0x40810000,384</DYN_PROFILE4>
+            <!-- MPCTLV3_SCHEDUTIL_PREDICTIVE_LOAD_CLUSTER_BIG -->
+            <!-- MPCTLV3_CORE_CTL_OFFLINE_DELAY_MS_BIG -->
+            <!-- MPCTLV3_CPU_LLCC_BW_SAMPLE_MS -->
+            <!-- MPCTLV3_GOLD_CPU_LLCC_BW_SAMPLE_MS -->
+            <!-- MPCTLV3_LLCC_DDR_BW_SAMPLE_MS -->MPCTLV3_CPU_LLCC_BW_AB_SCALE
+            <!-- MPCTLV3_CPU_LLCC_BW_AB_SCALE -->
+            <!-- MPCTLV3_GOLD_CPU_LLCC_BW_AB_SCALE -->
+            <!-- MPCTLV3_LLCC_DDR_BW_AB_SCALE -->
+            <!-- MPCTLV3_CPU_LLCC_BW_IO_PERCENT -->
+            <!-- MPCTLV3_GOLD_CPU_LLCC_BW_IO_PERCENT -->
+            <BASIC_PROFILE>0x41444000, 0, 0x41014000, 0, 0x4183C000, 33, 0x4185C000,33, 0x43034000, 33, 0x41878000, 50, 0x41874000, 50, 0x43048000, 50, 0x41834000, 200,  0x41854000, 200, 43020000, 200</BASIC_PROFILE>
+            <CPU_GOLD_FMIN_ENABLE>1</CPU_GOLD_FMIN_ENABLE>
+            <CPU_GOLD_FMIN>0x40810000</CPU_GOLD_FMIN>
+            <CPU_GOLD_FMAX_ENABLE>0</CPU_GOLD_FMAX_ENABLE>
+            <CPU_GOLD_FMAX>0x40810200</CPU_GOLD_FMAX>
+            <POST_PROFILE_OPCODE>0x6081C000</POST_PROFILE_OPCODE>
+        </Profile>
+    </Profiles>
+    <Trigger>
+        <AsyncId>0x00001001, 0x00001002, 0x00001003, 0x00001004, 0x00001330, 0x00001331, 0x00001332, 0x00001333, 0x00001335, 0x00001337, 0x00001338, 0x00001339, 0x00001402</AsyncId>
+    </Trigger>
+    <AppliedApps>
+        <!-- Apps which be included for optimization -->
+        <!-- Package, MaxFPS -->
+        <App>org.codeaurora.snapcam, 30</App> <!-- camera -->
+    </AppliedApps>
+</Feature>
